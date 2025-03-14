@@ -76,6 +76,10 @@ h2 {
   max-width: 80%;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Button Styles */
 .button-container {
   position: absolute;
