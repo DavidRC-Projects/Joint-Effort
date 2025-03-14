@@ -9,7 +9,7 @@
 
 /* CSS variables for font */
 :root {
-    --primary-font: "Merriweather", sans-serif;
+--primary-font: "Merriweather", sans-serif;
 --secondary-font: "Poppins", sans-serif; 
 }
 
@@ -18,4 +18,22 @@
 --clr-primary: #000000;
 --clr-secondary: #ffffff;
 --btn-colour: #58653D;
+}
+
+html, body {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: var(--clr-primary);
+    padding: 20px 0;
+}
+
+h1 {
+    color: var(--clr-secondary);
+    margin: 0;
 }
