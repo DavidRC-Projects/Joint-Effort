@@ -1,119 +1,126 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Asterisk to override default styles added by the browser */
 * {
-    padding: 0;
-    margin: 0;
-  }
+  padding: 0;
+  margin: 0;
+}
 
 /* CSS variables for font */
 :root {
---primary-font: "Merriweather", sans-serif;
---secondary-font: "Poppins", sans-serif; 
+  --primary-font: "Merriweather", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
 }
 
 /* CSS variables for colour */
 :root {
---clr-primary: #000000;
---clr-secondary: #ffffff;
---btn-colour: #58653D;
+  --clr-primary: #000000;
+  --bg-opacity: rgba(0, 0, 0, 0.6);
+  --btn-opacity: rgba(88, 101, 61, 0.7);
+  --clr-secondary: #ffffff;
+  --btn-colour: #58653d;
 }
 
-html, body {
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background: url('/assets/images/pexel.png') no-repeat center center/cover;
+html,
+body {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: url("/assets/images/pexel.png") no-repeat center center/cover;
 }
 
 /* Header */
 header {
-    background-color: var(--clr-primary);
-    padding: 10px 0;
-    opacity: 60%;
+  background-color: var(--bg-opacity);
+  padding: 10px 0;
 }
 
 h1 {
-    color: var(--clr-secondary);
-    margin: 0;
-    font-size: 3rem;
+  color: var(--clr-secondary);
+  margin: 0;
+  font-size: 3rem;
 }
 
 /* Main content */
 main {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 
 h2 {
-    position: absolute;
-    font-size: 2.5rem;
-    font-weight: bold;
-    font-family: var(--secondary-font);
-    color: var(--clr-secondary)
+  position: absolute;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  color: var(--clr-secondary);
+  background-color: var(--bg-opacity);
+  padding: 10px;
+  border-radius: 5px;
 }
 #paragraph {
-        margin-top: 200px;
-        color: var(--clr-secondary);
-        font-family: var(--secondary-font);
-        font-size: 2rem;
-    }
+  margin-top: 200px;
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  background-color: var(--bg-opacity);
+  padding: 10px;
+  border-radius: 5px;
+}
 
 /* Button Styles */
 .button-container {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
 }
 
 .btn {
-    background-color: var(--btn-colour);
-    color: var(--clr-secondary);
-    font-family: var(--secondary-font);
-    border: none;
-    padding: 5px 25px;
-    font-size: 1.5rem;
-    border-radius: 5px;
+  background-color: var(--btn-opacity);
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  border: none;
+  padding: 5px 25px;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 /* Footer */
 footer {
-    background-color: var(--clr-primary);
-    color: var(--clr-secondary);
-    padding: 10px 0;
-    font-size: 14px;
-    opacity: 60%;
+  background-color: var(--bg-opacity);
+  color: var(--clr-secondary);
+  padding: 10px 0;
+  font-size: 14px;
 }
 
 /* Media queries to allow different styles for small screens (tablets and mobile phones) */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-    }
+  h1 {
+    font-size: 1.8rem;
+  }
 
-    h2 {
-        font-size: 1.2rem;
-        padding: 0 10px;
-    }
+  h2 {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
 
-    #paragraph {
-        font-size: 1.1rem;
-    }
+  #paragraph {
+    font-size: 1.1rem;
+  }
 
-    .btn {
-        font-size: 1rem;
-    }
+  .btn {
+    font-size: 1rem;
+  }
 
-    .button-container {
-        padding: 5px 15px;
-    }
+  .button-container {
+    padding: 5px 15px;
+  }
 }
