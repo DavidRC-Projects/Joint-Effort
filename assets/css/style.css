@@ -36,6 +36,7 @@ header {
 h1 {
     color: var(--clr-secondary);
     margin: 0;
+    font-size: 3.5rem;
 }
 
 /* Main content */
@@ -47,6 +48,19 @@ main {
         align-items: center;
         padding: 20px;
     }
+
+h2 {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bold;
+}
+#paragraph {
+        margin-top: 200px;
+        color: white;
+        font-size: 2rem;
+    }
+
+
 
 /* Footer */
 footer {
