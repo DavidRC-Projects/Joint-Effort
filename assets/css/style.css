@@ -25,18 +25,19 @@ html, body {
     text-align: center;
     display: flex;
     flex-direction: column;
+    background: url('/assets/images/pexel.png') no-repeat center center/cover;
 }
 
 /* Header */
 header {
     background-color: var(--clr-primary);
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 h1 {
     color: var(--clr-secondary);
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 /* Main content */
@@ -51,8 +52,9 @@ main {
 
 h2 {
     position: absolute;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    color: var(--clr-secondary)
 }
 #paragraph {
         margin-top: 200px;
@@ -60,7 +62,25 @@ h2 {
         font-size: 2rem;
     }
 
+/* Button Styles */
+.button-container {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
 
+.btn {
+    background-color: var(--btn-colour);
+    color: white;
+    border: none;
+    opacity: 0.8;
+    padding: 5px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+}
 
 /* Footer */
 footer {
