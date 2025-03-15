@@ -1,9 +1,11 @@
 /**
  * Event listener triggers function when 'Play Now' button is clicked, making the quiz container appear in the centre of the screen
  */
-document.getElementById("start-quiz").addEventListener("click", function() {
-    const quizContainer = document.getElementById("quiz-container");
+const playNowButton = document.getElementById("start-quiz");
+const quizContainer = document.getElementById("quiz-container");
 
+playNowButton.addEventListener("click", function() {
+    
 // Remove the hidden class to make quiz container visible
 quizContainer.classList.remove("hidden");
 
@@ -14,6 +16,11 @@ quizContainer.style.backgroundColor = "grey";
 quizContainer.style.color = "white";
 quizContainer.style.position = "fixed";
 });
+
+/**
+ * Function to change style of 'Play Now' button when hovered over
+ */
+
 
 //CloseContainer function
 

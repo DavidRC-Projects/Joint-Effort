@@ -1,10 +1,12 @@
 /**
  * Event listener triggers function when 'how to play' button is clicked, making the how to play container appear in the centre of the screen
  */
-document.getElementById("howtoplay").addEventListener("click", function() {
-    const howToPlayContainer = document.getElementById("howtoplay-container");
+const howToPlayButton = document.getElementById("howtoplay");
+const howToPlayContainer = document.getElementById("howtoplay-container");
 
-// Remove the hidden class to make quiz container visible
+howToPlayButton.addEventListener("click", function() {
+    
+// Remove the hidden class to make container visible
 howToPlayContainer.classList.remove("hidden");
 
 // Styles for quiz container

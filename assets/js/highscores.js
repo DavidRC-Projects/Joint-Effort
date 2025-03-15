@@ -1,10 +1,12 @@
 /**
  * Event listener triggers function when 'high scores' button is clicked, making the high scores container appear in the centre of the screen
  */
-document.getElementById("highscores").addEventListener("click", function() {
-    const highScoresContainer = document.getElementById("highscores-container");
+const highscoresButton = document.getElementById("highscores");
+const highScoresContainer = document.getElementById("highscores-container");
 
-// Remove the hidden class to make quiz container visible
+highscoresButton.addEventListener("click", function() {
+
+// Remove the hidden class to make container visible
 highScoresContainer.classList.remove("hidden");
 
 // Styles for quiz container
