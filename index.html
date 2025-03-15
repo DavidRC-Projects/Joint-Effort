@@ -39,12 +39,24 @@
       <p id="paragraph">
         Click <strong>play now</strong> to test your knowledge
       </p>
-      <div class="button-container">
-        <button id="start-quiz" class="btn">Play Now</button>
+
+        <button data-modal-target="#modal" class="btn">Play Now</button>
+        <div class="modal" id="modal">
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div>
+            text here
+        </div>
+        </div>
+        <div id="overlay"></div>
+
         <button id="howtoplay" class="btn">How to Play</button>
         <button id="highscores" class="btn">High Scores</button>
       </div>
-      <div id="quiz-container" class="hidden">
+
+      <!-- Play now modal -->
+      <div id="quiz-modal" class="modal hidden">
+        <button data-close-button class="close-button">&times;</button>
        </div>
 
       <div id="howtoplay-container" class="hidden">
