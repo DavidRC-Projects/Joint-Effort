@@ -47,7 +47,7 @@ a {
   text-decoration: none;
 }
 
-/* Main content */
+/* Homepage styles*/
 main {
   flex: 1;
   display: flex;
@@ -57,7 +57,7 @@ main {
   padding: 20px;
 }
 
-h2 {
+#homepageh2 {
   position: absolute;
   font-size: 2.5rem;
   font-weight: bold;
@@ -81,7 +81,7 @@ h2 {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* Button Styles */
@@ -105,6 +105,18 @@ h2 {
   font-weight: bold;
 }
 
+/* Button Styles for how to play container */
+#btnhowtoplay {
+  border: none;
+  padding: 5px 25px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary)
+}
+
 /* Footer */
 footer {
   background-color: var(--bg-opacity);
@@ -113,7 +125,16 @@ footer {
   font-size: 14px;
 }
 
-/* How to play container */
+/* How to play container styles */
+#h2position {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  color: var(--clr-secondary);
+  background-color: var(--bg-opacity);
+  border-radius: 5px;
+}
+
 #headerhowtoplay {
   font-size: 2.5rem;
   font-weight: bold;
@@ -124,13 +145,24 @@ footer {
   height: 85vh;
 }
 
+#headerhowtoplay ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+#headerhowtoplay li {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
 /* Media queries to allow different styles for small screens (tablets and mobile phones) */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
   }
 
-  h2 {
+  #homepageh2 {
     font-size: 1.2rem;
     padding: 0 10px;
   }
@@ -145,6 +177,11 @@ footer {
 
   .button-container {
     padding: 5px 15px;
+  }
+
+  #btnhowtoplay {
+    padding: 5px 15px;
+    font-size: 1rem;
   }
 
   #headerhowtoplay {

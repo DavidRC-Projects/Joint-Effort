@@ -19,7 +19,7 @@ highScoresContainer.style.borderRadius = "5px";
 });
 
 /**
- * Function to change style of 'Play Now' button when hovered over
+ * Function to change style of 'Highscores' button when hovered over
  */
 highscoresButton.addEventListener("mouseover", function() {
 highscoresButton.style.backgroundColor = "#000000";
