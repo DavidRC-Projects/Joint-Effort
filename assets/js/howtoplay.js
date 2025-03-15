@@ -5,7 +5,7 @@ const howToPlayButton = document.getElementById("howtoplay");
 const howToPlayContainer = document.getElementById("howtoplay-container");
 
 howToPlayButton.addEventListener("click", function() {
-    
+
 // Remove the hidden class to make container visible
 howToPlayContainer.classList.remove("hidden");
 
@@ -15,4 +15,15 @@ howToPlayContainer.style.height = "85vh";
 howToPlayContainer.style.backgroundColor = "grey";
 howToPlayContainer.style.color = "white";
 howToPlayContainer.style.position = "fixed";
+});
+
+/**
+ * Function to change style of 'Play Now' button when hovered over
+ */
+howToPlayButton.addEventListener("mouseover", function() {
+howToPlayButton.style.backgroundColor = "#000000";
+});
+    
+howToPlayButton.addEventListener("mouseout", function() {
+howToPlayButton.style.backgroundColor = "#58653d";
 });

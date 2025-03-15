@@ -5,7 +5,7 @@ const playNowButton = document.getElementById("start-quiz");
 const quizContainer = document.getElementById("quiz-container");
 
 playNowButton.addEventListener("click", function() {
-    
+
 // Remove the hidden class to make quiz container visible
 quizContainer.classList.remove("hidden");
 
@@ -20,7 +20,13 @@ quizContainer.style.position = "fixed";
 /**
  * Function to change style of 'Play Now' button when hovered over
  */
+playNowButton.addEventListener("mouseover", function() {
+playNowButton.style.backgroundColor = "#000000";
+});
 
+playNowButton.addEventListener("mouseout", function() {
+playNowButton.style.backgroundColor = "#58653d";
+});
 
 //CloseContainer function
 

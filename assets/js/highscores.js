@@ -16,3 +16,14 @@ highScoresContainer.style.backgroundColor = "grey";
 highScoresContainer.style.color = "white";
 highScoresContainer.style.position = "fixed";
 });
+
+/**
+ * Function to change style of 'Play Now' button when hovered over
+ */
+highscoresButton.addEventListener("mouseover", function() {
+highscoresButton.style.backgroundColor = "#000000";
+});
+    
+highscoresButton.addEventListener("mouseout", function() {
+highscoresButton.style.backgroundColor = "#58653d";
+});
