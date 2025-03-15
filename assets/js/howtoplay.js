@@ -1,5 +1,5 @@
 /**
- * Event listener triggers function when 'Play Now' button is clicked, making the quiz container appear in the centre of the screen
+ * Event listener triggers function when 'how to play' button is clicked, making the how to play container appear in the centre of the screen
  */
 document.getElementById("howtoplay").addEventListener("click", function() {
     const howToPlayContainer = document.getElementById("howtoplay-container");
