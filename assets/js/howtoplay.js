@@ -12,9 +12,10 @@ howToPlayContainer.classList.remove("hidden");
 // Styles for quiz container
 howToPlayContainer.style.width = "85vw";
 howToPlayContainer.style.height = "85vh";
-howToPlayContainer.style.backgroundColor = "grey";
+howToPlayContainer.style.backgroundColor = "#58653d";
 howToPlayContainer.style.color = "white";
 howToPlayContainer.style.position = "fixed";
+howToPlayContainer.style.borderRadius = "5px";
 });
 
 /**

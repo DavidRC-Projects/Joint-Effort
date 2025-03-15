@@ -12,9 +12,10 @@ highScoresContainer.classList.remove("hidden");
 // Styles for quiz container
 highScoresContainer.style.width = "85vw";
 highScoresContainer.style.height = "85vh";
-highScoresContainer.style.backgroundColor = "grey";
+highScoresContainer.style.backgroundColor = "#58653d";
 highScoresContainer.style.color = "white";
 highScoresContainer.style.position = "fixed";
+highScoresContainer.style.borderRadius = "5px";
 });
 
 /**
