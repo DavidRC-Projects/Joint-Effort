@@ -10,8 +10,8 @@ highscoresButton.addEventListener("click", function() {
 highScoresContainer.classList.remove("hidden");
 
 // Styles for quiz container
-highScoresContainer.style.width = "85vw";
-highScoresContainer.style.height = "85vh";
+highScoresContainer.style.width = "80vw";
+highScoresContainer.style.height = "80vh";
 highScoresContainer.style.backgroundColor = "#58653d";
 highScoresContainer.style.color = "white";
 highScoresContainer.style.position = "fixed";
