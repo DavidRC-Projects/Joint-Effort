@@ -2,20 +2,25 @@
  * Event listener triggers function when 'how to play' button is clicked, making the how to play container appear in the centre of the screen
  */
 const howToPlayButton = document.getElementById("howtoplay");
-const howToPlayContainer = document.getElementById("howtoplay-container");
+const howToPlayModal = document.getElementById("howToPlayModal");
+const closeHowToPlayButton = howToPlayModal.querySelector("[data-close-button]");
+const overlay = document.getElementById("overlay");
 
-howToPlayButton.addEventListener("click", function () {
-  // Remove the hidden class to make container visible
-  howToPlayContainer.classList.remove("hidden");
+howToPlayButton.addEventListener("click", openHowToPlayModal);
+closeHowToPlayButton.addEventListener("click", closeHowToPlayModal);
+overlay.addEventListener("click", closeHowToPlayModal);
 
-  // Styles for quiz container
-  howToPlayContainer.style.width = "80vw";
-  howToPlayContainer.style.height = "80vh";
-  howToPlayContainer.style.backgroundColor = "#58653d";
-  howToPlayContainer.style.color = "white";
-  howToPlayContainer.style.position = "fixed";
-  howToPlayContainer.style.borderRadius = "5px";
-});
+// Function to open modal
+function openHowToPlayModal() {
+  howToPlayModal.classList.add("active");
+  overlay.classList.add("active");
+}
+
+// Function to close modal
+function closeHowToPlayModal() {
+  howToPlayModal.classList.remove("active");
+  overlay.classList.remove("active");
+}
 
 /**
  * Function to change style of 'How to Play' button when hovered over
@@ -29,9 +34,9 @@ howToPlayButton.addEventListener("mouseout", function () {
 });
 
 /**
- * Function to change style of 'Back to homepage' button when hovered over and event listener on click to return to homepage
+ * Function to change style of button when hovered over and event listener on click to return to homepage
  */
-const howToPlayButtonHome = document.getElementById("btnhowtoplay");
+const howToPlayButtonHome = document.getElementById("howtoplay");
 howToPlayButtonHome.addEventListener("mouseover", function () {
   howToPlayButtonHome.style.backgroundColor = "#ffffff";
   howToPlayButtonHome.style.color = "#000000";
@@ -40,8 +45,4 @@ howToPlayButtonHome.addEventListener("mouseover", function () {
 howToPlayButtonHome.addEventListener("mouseout", function () {
   howToPlayButtonHome.style.backgroundColor = "#000000";
   howToPlayButtonHome.style.color = "#ffffff";
-});
-
-howToPlayButtonHome.addEventListener("click", function () {
-    window.location.href = "index.html";
 });

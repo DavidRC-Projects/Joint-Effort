@@ -41,14 +41,30 @@
       </p>
 <div class="btncontainer">
         <button data-modal-target="#modal" class="btn">Play Now</button>
-        <button id="howtoplay" class="btn">How to Play</button>
+        <!-- How to Play Button -->
+        <button id="howtoplay" data-modal-target="#howToPlayModal" class="btn btnhowtoplay">How to Play</button>
         <button id="highscores" class="btn">High Scores</button>
         </div>
+        <!-- "How to Play" Modal -->
         <div class="modal" id="modal">
             <button data-close-button class="close-button">&times;</button>
         </div>
+        <div class="modal" id="howToPlayModal">
+          <button data-close-button class="close-button">&times;</button>
+          <ul>
+            <li>Enter your Username</li>
+            <li>Answer Multiple Choice Questions about anatomy</li>
+            <li>Each question has a time limit of 30 seconds</li>
+            <li>You score 1 point for every correct answer</li>
+            <li>
+              Once you have completed the quiz there is an option to retry any
+              wrong answers
+            </li>
+            <li>Your score will be recorded in the highscores</li>
+            <li>Good luck!</li>
+          </ul>
+        </div>
       </div>
-        </main>
         <div id="overlay"></div>
       </div>
     </main>
@@ -61,20 +77,6 @@
       <div id="howtoplay-container" class="hidden">
         <div id="headerhowtoplay">
           <h2 id="h2position">How to Play</h2>
-          <div>
-            <ul>
-              <li>Enter your Username</li>
-              <li>Answer Multiple Choice Questions about anatomy</li>
-              <li>Each question has a time limit of 30 seconds</li>
-              <li>You score 1 point for every correct answer</li>
-              <li>
-                Once you have completed the quiz there is an option to retry any
-                wrong answers
-              </li>
-              <li>Your score will be recorded in the highscores</li>
-              <li>Good luck!</li>
-            </ul>
-          </div>
           <button id="btnhowtoplay">Back to homepage</button>
         </div>
       </div>
