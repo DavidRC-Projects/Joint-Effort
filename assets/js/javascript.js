@@ -9,14 +9,6 @@ openModalButtons.forEach(button => {
 button.addEventListener("click", () => {
     const modal = document.querySelector(button.dataset.modalTarget)
     openModal(modal);
-
-// Styles for quiz modal
-modal.style.width = "80vw";
-modal.style.height = "80vh";
-modal.style.backgroundColor = "#58653d";
-modal.style.color = "white";
-modal.style.position = "fixed";
-modal.style.borderRadius = "5px";
 });
 });
 
@@ -45,6 +37,18 @@ function closeModal(modal) {
     modal.classList.remove("active");
     overlay.classList.remove("active");
 };
+
+/**
+ * Function to change style of 'How to Play' button when hovered over
+ */
+openModalButtons.addEventListener("mouseover", function () {
+    console.log("Mouse over detected!");
+    openModalButtons.style.backgroundColor = "#000000";
+  });
+  
+openModalButtons.addEventListener("mouseout", function () {
+    openModalButtons.style.backgroundColor = "rgba(88, 101, 61, 0.6)"
+  });
 
 // Remove the hidden class to make quiz container visible
 //modal.classList.remove("hidden");

@@ -93,7 +93,9 @@ main {
   border-radius: 10px;
   z-index: 50;
   width: 500px;
-  max-width: 80%;
+  width: 90vw;
+  height: 80vh;
+  background-color: rgba(88, 101, 61, 1);
 }
 
 .modal.active {
