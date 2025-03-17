@@ -98,6 +98,20 @@ main {
   background-color: rgba(88, 101, 61, 1);
 }
 
+.close-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  padding: 10px 20px;
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }

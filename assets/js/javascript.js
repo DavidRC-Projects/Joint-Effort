@@ -1,22 +1,26 @@
-/**
- * Event listener triggers function when 'Play Now' button is clicked, making the quiz container appear in the centre of the screen
- */
 const playNowButton = document.getElementById("playnow");
 const playNowModal = document.getElementById("modal");
 const closePlayNowButton = playNowModal.querySelector("[data-close-button]");
 const overlay = document.getElementById("overlay");
 
+/**
+ * Event listener triggers function when 'Play Now' button is clicked, making the quiz modal appear in the centre of the screen
+ */
 playNowButton.addEventListener("click", openPlayNowModal);
 closePlayNowButton.addEventListener("click", closePlayNowModal);
 overlay.addEventListener("click", closePlayNowModal);
 
-// Function to open modal
+/**
+ * Open modal function so that modal appears after the click from the event listener
+ */
 function openPlayNowModal() {
   playNowModal.classList.add("active");
   overlay.classList.add("active");
 }
 
-// Function to close modal
+/**
+ * Close modal function so that modal closes
+ */
 function closePlayNowModal() {
   playNowModal.classList.remove("active");
   overlay.classList.remove("active");
@@ -32,8 +36,6 @@ playNowButton.addEventListener("mouseover", function () {
 playNowButton.addEventListener("mouseout", function () {
     playNowButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)";
 });
-
-//CloseContainer function - see how to play section for button
 
 //ScoreFunction
 
