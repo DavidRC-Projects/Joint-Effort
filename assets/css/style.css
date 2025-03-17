@@ -152,7 +152,6 @@ main {
   border-radius: 5px;
   font-weight: bold;
   font-family: var(--secondary-font);
-  background-color: var(--clr-primary);
   color: var(--clr-secondary)
 }
 
