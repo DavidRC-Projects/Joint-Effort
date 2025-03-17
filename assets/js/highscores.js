@@ -1,30 +1,34 @@
 /**
  * Event listener triggers function when 'high scores' button is clicked, making the high scores container appear in the centre of the screen
  */
-const highscoresButton = document.getElementById("highscores");
-const highScoresContainer = document.getElementById("highscores-container");
+const highScoresButton = document.getElementById("highscores");
+const highScoresModal = document.getElementById("highScoresModal");
+const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
+const overlayHighScores = document.getElementById("overlay");
 
-highscoresButton.addEventListener("click", function() {
+highScoresButton.addEventListener("click", openHighScoresModal);
+closeHighScoresButton.addEventListener("click", closeHighScoresModal);
+overlay.addEventListener("click", closeHighScoresModal);
 
-// Remove the hidden class to make container visible
-highScoresContainer.classList.remove("hidden");
+// Function to open modal
+function openHighScoresModal() {
+  highScoresModal.classList.add("active");
+  overlay.classList.add("active");
+}
 
-// Styles for quiz container
-highScoresContainer.style.width = "80vw";
-highScoresContainer.style.height = "80vh";
-highScoresContainer.style.backgroundColor = "#58653d";
-highScoresContainer.style.color = "white";
-highScoresContainer.style.position = "fixed";
-highScoresContainer.style.borderRadius = "5px";
-});
+// Function to close modal
+function closeHighScoresModal() {
+  highScoresModal.classList.remove("active");
+  overlay.classList.remove("active");
+}
 
 /**
- * Function to change style of 'Highscores' button when hovered over
+ * Function to change style of 'How to Play' button when hovered over
  */
-highscoresButton.addEventListener("mouseover", function() {
-highscoresButton.style.backgroundColor = "#000000";
+highScoresButton.addEventListener("mouseover", function () {
+    highScoresButton.style.backgroundColor = "#000000";
 });
-    
-highscoresButton.addEventListener("mouseout", function() {
-highscoresButton.style.backgroundColor = "#58653d";
+
+highScoresButton.addEventListener("mouseout", function () {
+    highScoresButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)"
 });
