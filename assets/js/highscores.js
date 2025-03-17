@@ -3,9 +3,7 @@
  */
 const highScoresButton = document.getElementById("highscores");
 const highScoresModal = document.getElementById("highScoresModal");
-const closeHighScoresButton = highScoresModal.querySelector(
-  "[data-close-button]"
-);
+const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
 const overlayHighScores = document.getElementById("overlay");
 
 highScoresButton.addEventListener("click", openHighScoresModal);

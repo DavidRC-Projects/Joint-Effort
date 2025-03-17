@@ -3,9 +3,7 @@
  */
 const howToPlayButton = document.getElementById("howtoplay");
 const howToPlayModal = document.getElementById("howToPlayModal");
-const closeHowToPlayButton = howToPlayModal.querySelector(
-  "[data-close-button]"
-);
+const closeHowToPlayButton = howToPlayModal.querySelector("[data-close-button]");
 const overlayHowToPlay = document.getElementById("overlay");
 
 howToPlayButton.addEventListener("click", openHowToPlayModal);
