@@ -3,7 +3,9 @@
  */
 const highScoresButton = document.getElementById("highscores");
 const highScoresModal = document.getElementById("highScoresModal");
-const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
+const closeHighScoresButton = highScoresModal.querySelector(
+  "[data-close-button]"
+);
 const overlayHighScores = document.getElementById("overlay");
 
 highScoresButton.addEventListener("click", openHighScoresModal);
@@ -26,9 +28,9 @@ function closeHighScoresModal() {
  * Function to change style of 'How to Play' button when hovered over
  */
 highScoresButton.addEventListener("mouseover", function () {
-    highScoresButton.style.backgroundColor = "#000000";
+  highScoresButton.style.backgroundColor = "#000000";
 });
 
 highScoresButton.addEventListener("mouseout", function () {
-    highScoresButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)"
+  highScoresButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)";
 });

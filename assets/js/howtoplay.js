@@ -3,7 +3,9 @@
  */
 const howToPlayButton = document.getElementById("howtoplay");
 const howToPlayModal = document.getElementById("howToPlayModal");
-const closeHowToPlayButton = howToPlayModal.querySelector("[data-close-button]");
+const closeHowToPlayButton = howToPlayModal.querySelector(
+  "[data-close-button]"
+);
 const overlayHowToPlay = document.getElementById("overlay");
 
 howToPlayButton.addEventListener("click", openHowToPlayModal);
@@ -30,5 +32,5 @@ howToPlayButton.addEventListener("mouseover", function () {
 });
 
 howToPlayButton.addEventListener("mouseout", function () {
-  howToPlayButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)"
+  howToPlayButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)";
 });
