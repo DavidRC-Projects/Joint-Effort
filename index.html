@@ -44,7 +44,7 @@
         <button id="playnow" data-modal-target="#modal" class="btn">Play Now</button>
 
         <!-- How to Play Button -->
-        <button id="howtoplay" data-modal-target="#howToPlayModal" class="btn btnhowtoplay">How to Play</button>
+        <button id="howtoplay" data-modal-target="#howToPlayModal" class="btn">How to Play</button>
         
         <!-- Highscores Button -->
         <button id="highscores" class="btn">High Scores</button>
@@ -54,7 +54,15 @@
         <div class="modal" id="modal">
             <button data-close-button class="close-button">Close</button>
             <div id="score">Score: 0</div>
-            <main>content</main>
+            <main><img src="/assets/images/welcomepic.png" alt="Smiling Skeleton">
+              <div id="quiz-intro"><h2>Welcome to Joint Effort the anatomy quiz</h2><p>Please enter your username below to start the quiz</p></div>
+              <form id="usernameForm">
+                <label for="username">Enter Username:</label>
+                <input type="text" name="username" id="username" placeholder="Enter username" required>
+                <button type="submit">Submit</button>
+              </form>
+              <div id="messagemodal"></div>
+            </main>
         </div>
 
         <!-- How to Play Modal -->

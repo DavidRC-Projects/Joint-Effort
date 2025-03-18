@@ -37,6 +37,50 @@ playNowButton.addEventListener("mouseout", function () {
     playNowButton.style.backgroundColor = "rgba(88, 101, 61, 0.6)";
 });
 
+// Function for form validation
+function validateForm() {
+  const form = document.getElementById("usernameForm");
+  const messagemodal = document.getElementById('messagemodal');
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const userInput = form.username.value.trim();
+    
+    if (userInput === "") {
+      messagemodal.innerText = "Please enter your username before starting the quiz!";
+    } else {
+
+      // create a new modal with welcome message
+      const welcomeModal = document.createElement("div");
+      welcomeModal.id = "welcomeModal";
+      welcomeModal.classList.add("modal");
+      welcomeModal.classList.add = "active";
+
+      const message = document.createElement("p");
+      message.innerText = `Welcome, ${userInput}! You are now ready to start the quiz.`
+
+      const closeButton = document.createElement("button");
+      closeButton.innerText = "Close";
+
+      // Close the welcome message modal
+      closeButton.addEventListener("click", function() {
+        welcomeModal.style.display = "none";
+      });
+
+      welcomeModal.appendChild(message);
+      welcomeModal.appendChild(closeButton);
+
+      document.body.appendChild(welcomeModal);
+    }
+  });
+};
+
+// Call the validation function
+validateForm();
+
+
+
 //ScoreFunction
 
 //highscoresFunction

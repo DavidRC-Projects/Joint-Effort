@@ -98,11 +98,27 @@ main {
   background-color: rgba(88, 101, 61, 1);
 }
 
-.modal main {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.modal.active {
+  display: block;
+}
+
+main img {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+  border: 2px solid green;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+#quiz-intro {
+  position: absolute;
+  top: 20px;
+  width: 500px;
+  color: var(--clr-secondary);
 }
 
 #score {
@@ -127,7 +143,7 @@ main {
   padding: 10px 20px;
   background-color: var(--clr-primary);
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid var(--clr-secondary);
 }
 
 .modal.active {
@@ -149,6 +165,15 @@ main {
 #overlay.active {
   pointer-events: all;
   opacity: 1;
+}
+
+/* Form styles */
+#usernameForm {
+  margin-top: 80px;
+}
+
+#messagemodal {
+  margin-top: 80px;
 }
 
 .hidden {
@@ -178,15 +203,13 @@ main {
   font-weight: bold;
 }
 
-/* Button Styles for how to play container */
-#btnhowtoplay {
-  border: none;
-  padding: 5px 25px;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  font-family: var(--secondary-font);
-  color: var(--clr-secondary)
+/* Styles for content inside How to play modal */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 /* Footer */
