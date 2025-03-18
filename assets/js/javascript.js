@@ -41,37 +41,23 @@ playNowButton.addEventListener("mouseout", function () {
 function validateForm() {
   const form = document.getElementById("usernameForm");
   const messagemodal = document.getElementById('messagemodal');
-
+  
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const userInput = form.username.value.trim();
+    const userInput = form.username.value;
     
     if (userInput === "") {
       messagemodal.innerText = "Please enter your username before starting the quiz!";
     } else {
+      const welModal = document.getElementById("welcomemodal");
+      console.log(welModal);
 
-      // create a new modal with welcome message
-      const welcomeModal = document.createElement("div");
-      welcomeModal.id = "welcomeModal";
-      welcomeModal.classList.add("modal");
-      welcomeModal.classList.add = "active";
+      playNowModal.classList.remove("active");
+      overlay.classList.remove("active");
+      welModal.classList.add("active");
 
-      const message = document.createElement("p");
-      message.innerText = `Welcome, ${userInput}! You are now ready to start the quiz.`
-
-      const closeButton = document.createElement("button");
-      closeButton.innerText = "Close";
-
-      // Close the welcome message modal
-      closeButton.addEventListener("click", function() {
-        welcomeModal.style.display = "none";
-      });
-
-      welcomeModal.appendChild(message);
-      welcomeModal.appendChild(closeButton);
-
-      document.body.appendChild(welcomeModal);
+      console.log("i clicked submit");
     }
   });
 };

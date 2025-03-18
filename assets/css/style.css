@@ -98,8 +98,34 @@ main {
   background-color: rgba(88, 101, 61, 1);
 }
 
+.welmodal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  border: 2px solid green;
+  border-radius: 10px;
+  z-index: 100;
+  width: 500px;
+  width: 90vw;
+  height: 80vh;
+  background-color: rgba(88, 101, 61, 1);
+}
+
+.welmodal.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+
 .modal.active {
   display: block;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 main img {
@@ -144,10 +170,6 @@ main img {
   background-color: var(--clr-primary);
   border-radius: 5px;
   border: 1px solid var(--clr-secondary);
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
 }
 
 #overlay {
