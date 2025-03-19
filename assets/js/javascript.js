@@ -41,6 +41,9 @@ playNowButton.addEventListener("mouseout", function () {
 function validateForm() {
   const form = document.getElementById("usernameForm");
   const messagemodal = document.getElementById('messagemodal');
+  const startQuizBtn = document.getElementById("startquizbtn");
+
+  startQuizBtn.style.display = "none";
   
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -50,8 +53,9 @@ function validateForm() {
     if (userInput === "") {
       messagemodal.innerText = "Please enter your username before starting the quiz!";
     } else {
-      
-    }
+      messagemodal.innerText = `Thank you ${userInput}, please click next to start the quiz`;
+      startQuizBtn.style.display = "block";
+      }
   });
 };
 

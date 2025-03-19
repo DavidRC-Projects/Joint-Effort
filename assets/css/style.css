@@ -136,6 +136,10 @@ main img {
   font-family: var(--secondary-font);
 }
 
+.startquizbtn {
+  display: none;
+}
+
 .close-button {
   position: absolute;
   bottom: 20px;
