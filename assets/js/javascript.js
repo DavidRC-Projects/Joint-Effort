@@ -55,9 +55,29 @@ function validateForm() {
     } else {
       messagemodal.innerText = `Thank you ${userInput}, please click next to start the quiz`;
       startQuizBtn.style.display = "block";
+
+      startQuizBtn.addEventListener("click", openStartQuiz);
       }
   });
 };
+
+/**
+ * Function to remove all quiz related elements when start button is clicked
+ */
+function openStartQuiz () {
+const imgRemove = document.querySelector("main img");
+const quizIntroRemove = document.querySelector("#quiz-intro");
+const formRemove = document.querySelector("#usernameForm");
+const startBtnRemove = document.querySelector("#startquizbtn");
+const messageModalRemove = document.querySelector("#messagemodal");
+
+// All elements that have been selected to be removed 
+imgRemove.style.display = "none";
+quizIntroRemove.style.display = "none";
+formRemove.style.display = "none";
+startBtnRemove.style.display = "none";
+messageModalRemove.style.display = "none";
+}
 
 // Call the validation function
 validateForm();

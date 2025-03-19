@@ -107,7 +107,6 @@ main {
 }
 
 main img {
-  display: none;
   width: 400px;
   height: 400px;
   position: absolute;
@@ -120,7 +119,6 @@ main img {
 }
 
 #quiz-intro {
-  display: none;
   position: absolute;
   top: 20px;
   width: 500px;
@@ -176,7 +174,6 @@ main img {
 
 /* Form styles */
 #usernameForm {
-  display: none;
   margin-top: 80px;
 }
 
