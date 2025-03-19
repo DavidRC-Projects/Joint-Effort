@@ -185,6 +185,11 @@ main img {
   display: none;
 }
 
+/* Hidden quiz elements styling */
+#question, #answerone, #answertwo, #answerthree, #answerfour {
+  display: none;
+}
+
 /* Button Styles */
 .btncontainer {
   position: absolute;

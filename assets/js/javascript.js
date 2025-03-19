@@ -62,7 +62,8 @@ function validateForm() {
 };
 
 /**
- * Function to remove all quiz related elements when start button is clicked
+ * Function to remove all welcome page elements when start button is clicked
+ * Adds all elements for the quiz
  */
 function openStartQuiz () {
 const imgRemove = document.querySelector("main img");
@@ -71,12 +72,27 @@ const formRemove = document.querySelector("#usernameForm");
 const startBtnRemove = document.querySelector("#startquizbtn");
 const messageModalRemove = document.querySelector("#messagemodal");
 
+const scoreAdd = document.querySelector("#score");
+const answerOneAdd = document.querySelector("#answerone");
+const answertwoAdd = document.querySelector("#answertwo");
+const answerThreeAdd = document.querySelector("#answerthree");
+const answerFourAdd = document.querySelector("#answerfour");
+const questionAdd = document.querySelector("#question");
+
 // All elements that have been selected to be removed 
 imgRemove.style.display = "none";
 quizIntroRemove.style.display = "none";
 formRemove.style.display = "none";
 startBtnRemove.style.display = "none";
 messageModalRemove.style.display = "none";
+
+// All elements that have been selected to be added
+answerOneAdd.style.display = "block"; 
+answertwoAdd.style.display = "block"; 
+answerThreeAdd.style.display = "block"; 
+answerFourAdd.style.display = "block"; 
+questionAdd.style.display = "block";
+scoreAdd.style.display = "block";
 }
 
 // Call the validation function
