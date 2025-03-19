@@ -50,14 +50,7 @@ function validateForm() {
     if (userInput === "") {
       messagemodal.innerText = "Please enter your username before starting the quiz!";
     } else {
-      const welModal = document.getElementById("welcomemodal");
-      console.log(welModal);
-
-      playNowModal.classList.remove("active");
-      overlay.classList.remove("active");
-      welModal.classList.add("active");
-
-      console.log("i clicked submit");
+      
     }
   });
 };
