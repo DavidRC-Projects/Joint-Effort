@@ -107,6 +107,7 @@ main {
 }
 
 main img {
+  display: none;
   width: 400px;
   height: 400px;
   position: absolute;
@@ -119,6 +120,7 @@ main img {
 }
 
 #quiz-intro {
+  display: none;
   position: absolute;
   top: 20px;
   width: 500px;
@@ -162,6 +164,7 @@ main img {
 
 /* Form styles */
 #usernameForm {
+  display: none;
   margin-top: 80px;
 }
 
@@ -174,19 +177,15 @@ main img {
 }
 
 /* Hidden quiz elements set to display none until user has clicked start button */
-#question, #answerone, #answertwo, #answerthree, #answerfour, #score {
-  display: none;
-}
 
 /* styling hidden quiz elements */
-#question {
+#questioncontainer {
   background-color: var(--clr-secondary);
   font-family: var(--primary-font);
   font-size: 24px;
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
   margin-bottom: 40px;
-  margin-top: 20px;
   width: 70%;
 }
 
@@ -196,7 +195,7 @@ main img {
   font-size: 16px;
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 20px;
   width: 70%;
 }
 
@@ -233,6 +232,10 @@ main img {
   font-size: 1.5rem;
   border-radius: 5px;
   font-weight: bold;
+}
+
+#nextbutton {
+  display: none;
 }
 
 /* Styles for content inside How to play modal */
