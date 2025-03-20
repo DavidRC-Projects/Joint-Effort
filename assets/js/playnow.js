@@ -116,4 +116,4 @@ playNowButton.addEventListener("mouseout", function () {
 //}
 
 // Call the validation function
-validateForm();
+//validateForm();
