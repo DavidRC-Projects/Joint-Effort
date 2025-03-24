@@ -32,6 +32,7 @@ const questions = [
 const questionElement = document.getElementById("questioncontainer");
 const answerButtons = document.getElementById("answerbuttons");
 const nextButton = document.getElementById("nextbutton");
+const scoreElement = document.getElementById("score"); // To get score display
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -39,6 +40,7 @@ let score = 0;
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
+    scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
     showQuestions();
 }
@@ -74,6 +76,7 @@ function selectAnswer(e){
     if(isCorrect){
         selectedBtn.classList.add("correct");
         score++; //increase the score by 1 when answer is correct
+        scoreElement.textContent = `Score: ${score}`; // This updates the score display
     } else {
         selectedBtn.classList.add("incorrect");
     }

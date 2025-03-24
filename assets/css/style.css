@@ -238,6 +238,7 @@ main img {
   display: none;
 }
 
+/* Styles for answer buttons when correct and incorrect */
 .correct {
   background-color: green;
 }
