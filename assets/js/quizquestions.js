@@ -90,7 +90,35 @@ function selectAnswer(e){
 }
 
 function showScore() {
+const form = document.getElementById("usernameForm");
+const messagemodal = document.getElementById("messagemodal");
+const highScoreBtn = document.getElementById("highscoresbtn");
+form.addEventListener("submit", function (e) {
+e.preventDefault();
+
+const userInput = form.username.value;
+
+if (userInput === "") {
+    messagemodal.innerText =
+    "Please enter your username before ending the quiz!";
+   } else {
+     messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`;
+     
+     const highScoresBtn = document.createElement("button");
+            highScoresBtn.innerText = "High Scores";
+            highScoresBtn.classList.add("btn");
+            highScoresBtn.id = "highscoresbtn";
+
+            highScoresBtn.addEventListener("click", function () {
+                openHighScoresModal();
+            });
+
+            document.body.appendChild(highScoresBtn);
+        }
+    });
+    
     resetState();
+    validateForm();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
