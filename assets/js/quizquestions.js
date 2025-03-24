@@ -33,6 +33,8 @@ const questionElement = document.getElementById("questioncontainer");
 const answerButtons = document.getElementById("answerbuttons");
 const nextButton = document.getElementById("nextbutton");
 const scoreElement = document.getElementById("score"); // To get score display
+const form = document.getElementById("usernameForm");
+const messagemodal = document.getElementById("messagemodal");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -90,9 +92,16 @@ function selectAnswer(e){
 }
 
 function showScore() {
-const form = document.getElementById("usernameForm");
-const messagemodal = document.getElementById("messagemodal");
-const highScoreBtn = document.createElement("button");
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
+    form.style.display = "block";
+    messagemodal.style.display = "block";
+
+    const highScoreBtn = document.createElement("button");
+    highScoreBtn.innerText = "High Scores";
+    highScoreBtn.classList.add("btn");
+
 
 form.addEventListener("submit", function (e) {
 e.preventDefault();
@@ -100,30 +109,16 @@ e.preventDefault();
 const userInput = form.username.value;
 
 if (userInput === "") {
-    messagemodal.innerText =
-    "Please enter your username before ending the quiz!";
+   messagemodal.innerText =
+   "Please enter your username before ending the quiz!";
    } else {
-     messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`;
-     
-     const highScoreBtn = document.createElement("button");
-            highScoreBtn.innerText = "High Scores";
-            highScoreBtn.classList.add("btn");
-            highScoreBtn.id = "highscoresbtn";
-
-            highScoresBtn.addEventListener("click", function () {
-                openHighScoresModal();
-            });
-
-            document.body.appendChild(highScoresBtn);
-        }
-    });
+    messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
+            }
+        });
 
     resetState();
     validateForm();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
-}
+};
 
 function handleNextButton(){
     currentQuestionIndex++;
