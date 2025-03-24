@@ -5,11 +5,11 @@ const highScoresButton = document.getElementById("highscores");
 const highScoresModal = document.getElementById("highScoresModal");
 const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
 const overlayHighScores = document.getElementById("overlay");
+const highScoresList = document.getElementById('highscorelist');
 
 highScoresButton.addEventListener("click", openHighScoresModal);
 closeHighScoresButton.addEventListener("click", closeHighScoresModal);
 overlay.addEventListener("click", closeHighScoresModal);
-
 // Function to open modal
 function openHighScoresModal() {
   highScoresModal.classList.add("active");

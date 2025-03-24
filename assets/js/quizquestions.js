@@ -35,6 +35,7 @@ const nextButton = document.getElementById("nextbutton");
 const scoreElement = document.getElementById("score"); // To get score display
 const form = document.getElementById("usernameForm");
 const messagemodal = document.getElementById("messagemodal");
+const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -90,6 +91,11 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
+// https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage 
+function setLocalStorage() {
+    localStorage.setItem("score", score);
+    console.log("Score saved:", score);
+}
 
 function showScore() {
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
@@ -97,11 +103,10 @@ function showScore() {
     nextButton.style.display = "block";
     form.style.display = "block";
     messagemodal.style.display = "block";
+    highScoreButton.style.display = "block";
+    localStorage.setItem("score", score);
 
-    const highScoreBtn = document.createElement("button");
-    highScoreBtn.innerText = "High Scores";
-    highScoreBtn.classList.add("btn");
-
+    setLocalStorage();
 
 form.addEventListener("submit", function (e) {
 e.preventDefault();
@@ -116,8 +121,8 @@ if (userInput === "") {
             }
         });
 
-    resetState();
     validateForm();
+    resetState();
 };
 
 function handleNextButton(){
@@ -136,6 +141,10 @@ nextButton.addEventListener("click", ()=>{
         startQuiz();
     }
 });
+
+highScoreButton.addEventListener("click", ()=>{
+    openHighScoresModal();
+} )
 
 startQuiz();
 

@@ -256,6 +256,11 @@ ul {
   padding: 10px 0;
 }
 
+#highscorebtn {
+  display: none;
+  margin-top: 100px;
+}
+
 /* Footer */
 footer {
   background-color: var(--bg-opacity);
