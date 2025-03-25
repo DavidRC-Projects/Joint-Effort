@@ -66,6 +66,18 @@ function showQuestions(){
     });
 }
 
+let sec = 60;
+const time = setInterval(myTimer, 1000);
+
+function myTimer() {
+    document.getElementById("timer").innerHTML = sec + "sec left";
+    sec--;
+    if (sec === -1) {
+        clearInterval(time);
+        alert("You have ran out of time!");
+    }
+}
+
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
