@@ -117,12 +117,13 @@ function showScore() {
 form.addEventListener("submit", function (e) {
 e.preventDefault();
 
-const userInput = form.username.value;
+const userInput = form.username.value.trim();
 
 if (userInput === "") {
    messagemodal.innerText =
    "Please enter your username before ending the quiz!";
    } else {
+    setLocalStorage(userInput, score);
     messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
             }
         });
