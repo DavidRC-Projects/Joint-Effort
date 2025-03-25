@@ -94,11 +94,14 @@ function selectAnswer(e){
 
 // https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage
 //https://www.youtube.com/watch?v=rsWhJ2XviE4 
-function setLocalStorage() {
+function saveHighScore(username, score) {
     let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     const newScore = { name: username, score: score };
+    
     highScores.push(newScore);
     highScores.sort((a, b) => b.score - a.score);
+    highScores.splice(10);
+    
     localStorage.setItem("highScores", JSON.stringify(highScores));
     console.log("High Scores Updated:", highScores);
 }
@@ -112,8 +115,6 @@ function showScore() {
     highScoreButton.style.display = "block";
     localStorage.setItem("score", score);
 
-    setLocalStorage();
-
 form.addEventListener("submit", function (e) {
 e.preventDefault();
 
@@ -123,9 +124,10 @@ if (userInput === "") {
    messagemodal.innerText =
    "Please enter your username before ending the quiz!";
    } else {
-    setLocalStorage(userInput, score);
+    saveHighScore(userInput, score);
     messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
-            }
+    form.style.display = "none";
+}
         });
 
     validateForm();

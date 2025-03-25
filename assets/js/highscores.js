@@ -22,12 +22,16 @@ function displayHighScores() {
   highScoresList.innerHTML = "";
   let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
-  highScores.forEach(scoreEntry => {
-    const listItem = document.createElement("li");
+  if (highScores.length === 0) {
+    highScoresList.innerHTML = "<li>No highscores</li>";
+   } else {
+    highScores.forEach(scoreEntry => {
+    let listItem = document.createElement("li");
     listItem.textContent = `${scoreEntry.name}: ${scoreEntry.score}`;
     highScoresList.appendChild(listItem);
   });
-
+   };
+   
   console.log("Displayed High Scores:", highScores);
 }
 
