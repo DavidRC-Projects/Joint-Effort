@@ -10,10 +10,25 @@ const highScoresList = document.getElementById('highscorelist');
 highScoresButton.addEventListener("click", openHighScoresModal);
 closeHighScoresButton.addEventListener("click", closeHighScoresModal);
 overlay.addEventListener("click", closeHighScoresModal);
+
 // Function to open modal
 function openHighScoresModal() {
   highScoresModal.classList.add("active");
   overlay.classList.add("active");
+  displayHighScores();
+}
+
+function displayHighScores() {
+  highScoresList.innerHTML = "";
+  let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+  highScores.forEach(scoreEntry => {
+    const listItem = document.createElement("li");
+    listItem.textContent = `${scoreEntry.name}: ${scoreEntry.score}`;
+    highScoresList.appendChild(listItem);
+  });
+
+  console.log("Displayed High Scores:", highScores);
 }
 
 // Function to close modal
