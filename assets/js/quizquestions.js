@@ -91,10 +91,16 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
-// https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage 
+
+// https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage
+//https://www.youtube.com/watch?v=rsWhJ2XviE4 
 function setLocalStorage() {
-    localStorage.setItem("score", score);
-    console.log("Score saved:", score);
+    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    const newScore = { name: username, score: score };
+    highScores.push(newScore);
+    highScores.sort((a, b) => b.score - a.score);
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    console.log("High Scores Updated:", highScores);
 }
 
 function showScore() {
