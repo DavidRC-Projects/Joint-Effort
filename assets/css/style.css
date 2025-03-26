@@ -166,7 +166,25 @@ main img {
 /* Form styles */
 #usernameForm {
   display: none;
+  font-family: var(--secondary-font);
   margin-top: 80px;
+  width: 300px;
+  padding: 20px;
+  background: var(--clr-secondary);
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+#usernameForm button {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  border: none;
+  padding: 5px 25px;
+  font-size: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 #messagemodal {
@@ -238,6 +256,15 @@ main img {
 
 #nextbutton {
   display: none;
+}
+
+/* styles for answer buttons */
+#answerbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 70%;
+  align-items: center;
 }
 
 /* Styles for answer buttons when correct and incorrect */

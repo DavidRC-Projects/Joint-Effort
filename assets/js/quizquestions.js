@@ -289,6 +289,7 @@ nextButton.addEventListener("click", ()=>{
         handleNextButton();
     } else {
         startQuiz();
+        form.style.display = "none";
     }
 });
 
