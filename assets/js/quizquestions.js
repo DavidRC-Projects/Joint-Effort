@@ -116,6 +116,24 @@ const questions = [
             { text: "Pubis", correct: false },
             { text: "Sacrum", correct: false }
         ]
+    },
+    {
+        question: "Which bone is primarily responsible for bearing weight in the lower leg?",
+        answers: [
+            { text: "Fibula", correct: false },
+            { text: "Femur", correct: false },
+            { text: "Tibia", correct: true },
+            { text: "Patella", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the first cervical vertebra that supports the skull?",
+        answers: [
+            { text: "Axis", correct: false },
+            { text: "Cervical 3", correct: false },
+            { text: "Odontoid", correct: false },
+            { text: "Atlas", correct: true }
+        ]
     }
 ];
 
@@ -135,6 +153,7 @@ let timer;
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
+    sec = 60;
     scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
     showQuestions();

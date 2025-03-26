@@ -142,7 +142,8 @@ main img {
   padding: 10px 20px;
   background-color: var(--clr-primary);
   border-radius: 5px;
-  border: 1px solid var(--clr-secondary);
+  border: 2px solid var(--clr-secondary);
+  box-shadow: 4px 4px 0px var(--clr-primary)
 }
 
 #overlay {
@@ -232,6 +233,7 @@ main img {
   font-size: 1.5rem;
   border-radius: 5px;
   font-weight: bold;
+  box-shadow: 4px 4px 0px var(--clr-primary);
 }
 
 #nextbutton {
