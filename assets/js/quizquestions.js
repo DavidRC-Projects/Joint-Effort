@@ -39,6 +39,8 @@ const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let sec = 60;
+let timer;
 
 function startQuiz(){
     currentQuestionIndex = 0;
@@ -46,6 +48,7 @@ function startQuiz(){
     scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
     showQuestions();
+    startTimer();
 }
 
 function showQuestions(){
@@ -66,17 +69,28 @@ function showQuestions(){
     });
 }
 
-let sec = 60;
-const time = setInterval(myTimer, 1000);
+// https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
 
-function myTimer() {
-    document.getElementById("timer").innerHTML = sec + "sec left";
-    sec--;
-    if (sec === -1) {
-        clearInterval(time);
-        alert("You have ran out of time!");
-    }
-}
+function startTimer() {
+    const timerElement = document.getElementById("timer");
+    
+    clearInterval(timer);
+
+    timer = setInterval(function () {
+        timerElement.innerHTML = sec + " sec left";
+
+        if (sec === 10) {
+            timerElement.innerHTML += " - Hurry! Only 10 seconds left!";
+        }
+
+        if (sec === 0) {
+            clearInterval(timer);
+            showScore();
+        } else {
+            sec--;
+        }
+    }, 1000);
+};
 
 function resetState(){
     nextButton.style.display = "none";
@@ -151,6 +165,7 @@ function handleNextButton(){
     if(currentQuestionIndex < questions.length){
         showQuestions();
     } else {
+        clearInterval(timer);
         showScore();
     }
 }
