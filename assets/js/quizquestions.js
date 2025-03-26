@@ -156,38 +156,22 @@ function startQuiz(){
     sec = 60;
     scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
+    resetState();
     showQuestions();
     startTimer();
 
-    // Hides the message and highscores button
+    // Hides the form, message and highscores button when quiz starts
+    form.style.display = "none";
     messagemodal.style.display = "none";
     highScoreButton.style.display = "none";
 }
 
-function showQuestions(){
-    resetState(); // resets the previous questions and answers
-    let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
-
-    currentQuestion.answers.forEach(answer => {
-        const button = document.createElement("button");
-        button.innerHTML= answer.text;
-        button.classList.add("btn");
-        answerButtons.appendChild(button);
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
-        }
-        button.addEventListener("click", selectAnswer);
-    });
-}
-
-// https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
-
 function startTimer() {
     const timerElement = document.getElementById("timer");
     
-    clearInterval(timer);
+    clearInterval(timer); // Clear any existing timer before starting a new one
+    sec = 60; // Reset seconds
+    timerElement.innerHTML = `${sec} sec left`;
 
     timer = setInterval(function () {
         timerElement.innerHTML = sec + " sec left";
@@ -212,6 +196,27 @@ function resetState(){
     }
 }
 
+function showQuestions(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML= answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+}
+
+// https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
+
+
 function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -229,10 +234,11 @@ function selectAnswer(e){
         button.disabled = true;
     });
     nextButton.style.display = "block";
-}
+};
 
 // https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage
 //https://www.youtube.com/watch?v=rsWhJ2XviE4 
+
 function saveHighScore(username, score) {
     let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     const newScore = { name: username, score: score };
@@ -248,27 +254,28 @@ function saveHighScore(username, score) {
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
     form.style.display = "block";
     messagemodal.style.display = "block";
     highScoreButton.style.display = "block";
     localStorage.setItem("score", score);
+    currentQuestionIndex = 0;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
 
-form.addEventListener("submit", function (e) {
-e.preventDefault();
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-const userInput = form.username.value.trim();
+        const userInput = form.username.value.trim();
 
-if (userInput === "") {
-   messagemodal.innerText =
-   "Please enter your username before ending the quiz!";
-   } else {
-    saveHighScore(userInput, score);
-    messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
-    form.style.display = "none";
-}
-        });
+        if (userInput === "") {
+            messagemodal.innerText =
+            "Please enter your username before ending the quiz!";
+        } else {
+            saveHighScore(userInput, score);
+            messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
+            form.style.display = "none";
+        }
+    });
 
     validateForm();
     resetState();
@@ -289,7 +296,6 @@ nextButton.addEventListener("click", ()=>{
         handleNextButton();
     } else {
         startQuiz();
-        form.style.display = "none";
     }
 });
 
@@ -298,4 +304,3 @@ highScoreButton.addEventListener("click", ()=>{
 } )
 
 startQuiz();
-

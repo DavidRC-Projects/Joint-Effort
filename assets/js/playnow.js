@@ -12,10 +12,25 @@ overlay.addEventListener("click", closePlayNowModal);
 
 /**
  * Open modal function so that modal appears after the click from the event listener
+ * Also calls startQuiz() to reset questions and timer
  */
 function openPlayNowModal() {
   playNowModal.classList.add("active");
   overlay.classList.add("active");
+  
+  // Call startQuiz() to reset questions and timer
+  if (typeof startQuiz === 'function') {
+    // Force reset of all quiz state
+    currentQuestionIndex = 0;
+    score = 0;
+    
+    // Clear any existing timer
+    if (typeof timer !== 'undefined') {
+      clearInterval(timer);
+    }
+    
+    startQuiz();
+  }
 }
 
 /**
