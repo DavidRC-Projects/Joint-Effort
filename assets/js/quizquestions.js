@@ -26,6 +26,96 @@ const questions = [
             { text: "216", correct: false },
             { text: "200", correct: false }
         ]
+    },
+    {
+        question: "Which of these is not a part of the axial skeleton?",
+        answers: [
+            { text: "Skull", correct: false },
+            { text: "Ribs", correct: false },
+            { text: "Spine", correct: false },
+            { text: "Femur", correct: true }
+        ]
+    },
+    {
+        question: "Which bone is located in the upper arm?",
+        answers: [
+            { text: "Humerus", correct: true },
+            { text: "Radius", correct: false },
+            { text: "Ulna", correct: false },
+            { text: "Clavicle", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the bone that forms the base of the skull?",
+        answers: [
+            { text: "Occipital bone", correct: true },
+            { text: "Temporal bone", correct: false },
+            { text: "Frontal bone", correct: false },
+            { text: "Parietal bone", correct: false }
+        ]
+    },
+    {
+        question: "Which bone is commonly known as the collarbone?",
+        answers: [
+            { text: "Clavicle", correct: true },
+            { text: "Scapula", correct: false },
+            { text: "Sternum", correct: false },
+            { text: "Rib", correct: false }
+        ]
+    },
+    {
+        question: "The patella is commonly known as the:",
+        answers: [
+            { text: "Knee cap", correct: true },
+            { text: "Elbow joint", correct: false },
+            { text: "Ankle bone", correct: false },
+            { text: "Wrist bone", correct: false }
+        ]
+    },
+    {
+        question: "Which part of the body contains the most bones?",
+        answers: [
+            { text: "Hands", correct: true },
+            { text: "Feet", correct: false },
+            { text: "Arms", correct: false },
+            { text: "Legs", correct: false }
+        ]
+    },
+    {
+        question: "Which bone is the most proximal in the arm?",
+        answers: [
+            { text: "Humerus", correct: true },
+            { text: "Radius", correct: false },
+            { text: "Ulna", correct: false },
+            { text: "Scapula", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the bony structure that protects the brain?",
+        answers: [
+            { text: "Skull", correct: true },
+            { text: "Ribs", correct: false },
+            { text: "Pelvis", correct: false },
+            { text: "Vertebrae", correct: false }
+        ]
+    },
+    {
+        question: "Which bone forms the lower part of the spine?",
+        answers: [
+            { text: "Sacrum", correct: true },
+            { text: "Coccyx", correct: false },
+            { text: "Lumbar", correct: false },
+            { text: "Thoracic", correct: false }
+        ]
+    },
+    {
+        question: "Which bone forms the back portion of the pelvis?",
+        answers: [
+            { text: "Ilium", correct: false },
+            { text: "Ischium", correct: true },
+            { text: "Pubis", correct: false },
+            { text: "Sacrum", correct: false }
+        ]
     }
 ];
 
@@ -49,6 +139,10 @@ function startQuiz(){
     nextButton.innerHTML = "Next";
     showQuestions();
     startTimer();
+
+    // Hides the message and highscores button
+    messagemodal.style.display = "none";
+    highScoreButton.style.display = "none";
 }
 
 function showQuestions(){
