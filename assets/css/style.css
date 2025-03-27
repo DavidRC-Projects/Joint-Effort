@@ -74,7 +74,7 @@ main {
   margin-top: 200px;
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: var(--bg-opacity);
   padding: 10px;
   border-radius: 5px;
@@ -127,25 +127,6 @@ main img {
   color: var(--clr-secondary);
 }
 
-.startquizbtn {
-  display: none;
-}
-
-.close-button {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--clr-secondary);
-  font-family: var(--secondary-font);
-  font-size: 24px;
-  padding: 10px 20px;
-  background-color: var(--clr-primary);
-  border-radius: 5px;
-  border: 2px solid var(--clr-secondary);
-  box-shadow: 4px 4px 0px var(--clr-primary)
-}
-
 #overlay {
   position: fixed;
   opacity: 0;
@@ -176,17 +157,6 @@ main img {
   transition: all 0.3s ease-in-out;
 }
 
-#usernameForm button {
-  background-color: var(--clr-primary);
-  color: var(--clr-secondary);
-  font-family: var(--secondary-font);
-  border: none;
-  padding: 5px 25px;
-  font-size: 0.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 #messagemodal {
   margin-top: 80px;
 }
@@ -213,12 +183,11 @@ main img {
 
 #answerone, #answertwo, #answerthree, #answerfour {
   background-color: var(--clr-secondary);
-  padding: 10px;
+  padding: 20px;
   font-size: 16px;
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
   margin-top: 20px;
-  width: 70%;
 }
 
 #score {
@@ -250,7 +219,6 @@ main img {
   border-radius: 5px;
 }
 
-
 /* Button Styles */
 .btncontainer {
   position: absolute;
@@ -263,11 +231,16 @@ main img {
   flex-wrap: wrap;
 }
 
+#answerbuttons .btn {
+  width: 70vw;
+  color: var(--clr-primary);
+  background-color: var(--clr-secondary);
+}
+
 .btn {
   background-color: var(--btn-opacity);
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
-  border: none;
   padding: 5px 25px;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -277,6 +250,44 @@ main img {
 
 #nextbutton {
   display: none;
+  width: 50%;
+  font-family: var(--clr-secondary);
+  font-size: 16px;
+  margin-top: 25px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+.startquizbtn {
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  padding: 5px 25px;
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px var(--clr-primary);
+}
+
+#usernameForm button {
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  border: none;
+  padding: 5px 25px;
+  font-size: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 /* styles for answer buttons */
@@ -290,11 +301,28 @@ main img {
 
 /* Styles for answer buttons when correct and incorrect */
 .correct {
-  background-color: green;
+  background-color: green !important;
+  font-size: 20px !important;
+  transition: 300ms;
 }
 
 .incorrect {
-  background-color: red;
+  background-color: rgb(179, 19, 19) !important;
+  opacity: 0.9;
+  transition: 100ms;
+}
+
+#highscorebtn {
+  display: none;
+  margin-top: 50px;
+  width: 50%;
+  font-family: var(--clr-secondary);
+  font-size: 16px;
+  margin-top: 25px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
 }
 
 /* Styles for content inside How to play modal */
@@ -304,11 +332,6 @@ ul {
   margin: 20px 0;
   font-size: 1.2rem;
   padding: 10px 0;
-}
-
-#highscorebtn {
-  display: none;
-  margin-top: 50px;
 }
 
 /* Footer */
@@ -352,8 +375,8 @@ footer {
   }
 
   #paragraph {
-    font-size: 1.1rem;
-    margin-bottom: 60px;
+    font-size: 1rem;
+    margin-bottom: 70px;
   }
 
   .btn {
