@@ -200,15 +200,15 @@ main img {
 /* styling hidden quiz elements */
 #questioncontainer {
   position: relative;
-  margin-top: 20px;
   padding: 10px;
   background-color: var(--clr-secondary);
   font-family: var(--primary-font);
   font-size: 24px;
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
-  margin-bottom: 40px;
-  width: 70%;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
 #answerone, #answertwo, #answerthree, #answerfour {
@@ -230,6 +230,24 @@ main img {
   margin-bottom: 20px;
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
+  border: 3px solid var(--clr-secondary);
+  box-shadow: 1px 1px 2px;
+  border-radius: 5px;
+}
+
+#timer {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  color: var(--clr-secondary);
+  background: var(--clr-primary);
+  padding: 10px 20px;
+  border: 3px solid var(--clr-secondary);
+  box-shadow: 1px 1px 2px;
+  border-radius: 5px;
 }
 
 
@@ -265,7 +283,7 @@ main img {
 #answerbuttons {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   width: 70%;
   align-items: center;
 }
@@ -358,5 +376,9 @@ footer {
     color: var(--clr-secondary);
     padding: 10px;
     border-radius: 5px;
+  }
+
+  #questioncontainer {
+    font-size: 16px;
   }
 }

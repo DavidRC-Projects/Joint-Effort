@@ -142,13 +142,19 @@ const answerButtons = document.getElementById("answerbuttons");
 const nextButton = document.getElementById("nextbutton");
 const scoreElement = document.getElementById("score"); // To get score display
 const form = document.getElementById("usernameForm");
-const messagemodal = document.getElementById("messagemodal");
 const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
 let score = 0;
 let sec = 60;
 let timer;
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
 
 function startQuiz(){
     currentQuestionIndex = 0;
@@ -160,10 +166,10 @@ function startQuiz(){
     showQuestions();
     startTimer();
 
-    // Hides the form, message and highscores button when quiz starts
+    // Hides the form and highscores button when quiz starts
     form.style.display = "none";
-    messagemodal.style.display = "none";
     highScoreButton.style.display = "none";
+    form.style.display = "none";
 }
 
 function startTimer() {
@@ -188,13 +194,6 @@ function startTimer() {
         }
     }, 1000);
 };
-
-function resetState(){
-    nextButton.style.display = "none";
-    while(answerButtons.firstChild){
-        answerButtons.removeChild(answerButtons.firstChild);
-    }
-}
 
 function showQuestions(){
     resetState();
@@ -255,12 +254,11 @@ function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     form.style.display = "block";
-    messagemodal.style.display = "block";
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.display = "block";
     highScoreButton.style.display = "block";
     localStorage.setItem("score", score);
     currentQuestionIndex = 0;
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -268,17 +266,13 @@ function showScore() {
         const userInput = form.username.value.trim();
 
         if (userInput === "") {
-            messagemodal.innerText =
-            "Please enter your username before ending the quiz!";
+            alert("Please enter your username before ending the quiz!");
         } else {
             saveHighScore(userInput, score);
-            messagemodal.innerText = `Thank you ${userInput}, please click play again or highcores to see where you rank`; 
+            alert(`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`);
             form.style.display = "none";
         }
     });
-
-    validateForm();
-    resetState();
 };
 
 function handleNextButton(){
@@ -292,10 +286,10 @@ function handleNextButton(){
 }
 
 nextButton.addEventListener("click", ()=>{
-    if(currentQuestionIndex < questions.length){
-        handleNextButton();
+    if (nextButton.innerHTML === "Play Again") {
+        startQuiz();  // Restart the quiz if "Play Again" is displayed
     } else {
-        startQuiz();
+        handleNextButton();
     }
 });
 
