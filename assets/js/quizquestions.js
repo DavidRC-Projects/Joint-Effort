@@ -134,6 +134,50 @@ const questions = [
             { text: "Odontoid", correct: false },
             { text: "Atlas", correct: true }
         ]
+    },{
+        question: "Which bone forms the base of the palm in the human hand?",
+        answers: [
+            { text: "Scaphoid", correct: false },
+            { text: "Carpals", correct: false },
+            { text: "Metacarpals", correct: true },
+            { text: "Phalanges", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the bone located in the elbow joint that connects the upper arm to the forearm?",
+        answers: [
+            { text: "Humerus", correct: true },
+            { text: "Ulna", correct: false },
+            { text: "Radius", correct: false },
+            { text: "Scapula", correct: false }
+        ]
+    },
+    {
+        question: "Which bone is commonly known as the shoulder blade?",
+        answers: [
+            { text: "Clavicle", correct: false },
+            { text: "Scapula", correct: true },
+            { text: "Humerus", correct: false },
+            { text: "Sternum", correct: false }
+        ]
+    },
+    {
+        question: "Which part of the hand is composed of 14 bones?",
+        answers: [
+            { text: "Metacarpals", correct: false },
+            { text: "Phalanges", correct: true },
+            { text: "Carpals", correct: false },
+            { text: "Radius", correct: false }
+        ]
+    },
+    {
+        question: "Which bone in the elbow acts as a hinge, allowing the arm to bend and straighten?",
+        answers: [
+            { text: "Ulna", correct: true },
+            { text: "Radius", correct: false },
+            { text: "Humerus", correct: false },
+            { text: "Scapula", correct: false }
+        ]
     }
 ];
 
@@ -229,11 +273,12 @@ function showQuestions(){
 // https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
 
 function nextQuestion() {
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < questions.length) {
+        const currentQuestion = questions[currentQuestionIndex];
+        displayQuestion(currentQuestion);
         currentQuestionIndex++;
-        loadQuestion(currentQuestionIndex);
     } else {
-        endQuiz();
+        showScore();
     }
 }
 
@@ -273,7 +318,7 @@ function saveHighScore(username, score) {
 
 function showScore() {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    questionElement.innerHTML = `You scored ${score} out of 15`;
     form.style.display = "block";
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
@@ -298,7 +343,7 @@ function showScore() {
 
 function handleNextButton(){
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length){
+    if(currentQuestionIndex < 15) {
         showQuestions();
     } else {
         clearInterval(timer);

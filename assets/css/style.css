@@ -371,6 +371,16 @@ main img {
   color: rgb(191, 250, 191);
 }
 
+/* Styles for content inside highscores modal */
+#highScoresModal li {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 15px;
+  font-family: var(--secondary-font);
+  color: var(--clr-secondary);
+  list-style-position: inside;
+}
+
 /* Footer */
 footer {
   background-color: var(--bg-opacity);
