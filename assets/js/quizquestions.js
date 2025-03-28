@@ -12,8 +12,8 @@ const questions = [
     {
         question: "What is the largest bone in the human body?",
         answers: [
-            { text: "Femur", correct: true },
             { text: "Tibia", correct: false },
+            { text: "Femur", correct: true },
             { text: "Fibula", correct: false },
             { text: "Humerus", correct: false }
         ]
@@ -21,10 +21,10 @@ const questions = [
     {
         question: "How many bones are in the adult human body?",
         answers: [
-            { text: "206", correct: true },
+            { text: "200", correct: false },
             { text: "210", correct: false },
             { text: "216", correct: false },
-            { text: "200", correct: false }
+            { text: "206", correct: true }
         ]
     },
     {
@@ -66,18 +66,18 @@ const questions = [
     {
         question: "The patella is commonly known as the:",
         answers: [
-            { text: "Knee cap", correct: true },
+            { text: "Wrist bone", correct: false },
             { text: "Elbow joint", correct: false },
             { text: "Ankle bone", correct: false },
-            { text: "Wrist bone", correct: false }
+            { text: "Knee Cap", correct: true }
         ]
     },
     {
         question: "Which part of the body contains the most bones?",
         answers: [
-            { text: "Hands", correct: true },
-            { text: "Feet", correct: false },
             { text: "Arms", correct: false },
+            { text: "Feet", correct: false },
+            { text: "Hands", correct: true },
             { text: "Legs", correct: false }
         ]
     },
@@ -145,9 +145,22 @@ const form = document.getElementById("usernameForm");
 const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
+let selectedQuestions = []; // track questions and avoid duplicating the questions
 let score = 0;
 let sec = 60;
 let timer;
+
+// https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn
+const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array
+
+const getRandomObject = (arr) => {
+    const randomIndex = getRandomIndex(arr);
+    if (selectedQuestions.includes(randomIndex)) {
+        return getRandomObject(arr);
+      }
+      selectedQuestions.push(randomIndex);
+  return arr[randomIndex];
+};
 
 function resetState(){
     nextButton.style.display = "none";
@@ -197,9 +210,10 @@ function startTimer() {
 
 function showQuestions(){
     resetState();
+    const currentQuestion = getRandomObject(questions);
     let currentQuestion = questions[currentQuestionIndex];
-    let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    
+    questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -211,6 +225,7 @@ function showQuestions(){
         }
         button.addEventListener("click", selectAnswer);
     });
+    currentQuestionIndex++;
 }
 
 // https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
