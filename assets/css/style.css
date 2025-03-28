@@ -262,23 +262,13 @@ main img {
   color: var(--clr-secondary);
 }
 
-.startquizbtn {
-  display: none;
+#nextbutton:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
-.close-button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40%;
-  color: var(--clr-secondary);
-  font-family: var(--secondary-font);
-  font-size: 16px;
-  padding: 5px 25px;
-  background-color: var(--clr-primary);
-  border-radius: 5px;
-  box-shadow: 2px 2px 0px var(--clr-primary);
+.startquizbtn {
+  display: none;
 }
 
 #usernameForm button {
@@ -299,6 +289,26 @@ main img {
   gap: 20px;
   width: 70%;
   align-items: center;
+}
+
+.close-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  padding: 4px 20px;
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px var(--clr-primary);
+}
+
+.close-button:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 /* Styles for answer buttons when correct and incorrect */
@@ -327,13 +337,38 @@ main img {
   color: var(--clr-secondary);
 }
 
-/* Styles for content inside How to play modal */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px 0;
+#highscorebtn:hover{
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+#howToPlayh2 {
+  margin-top: 20px;
+  color: var(--clr-secondary);
+  font-family: var(--primary-font);
   font-size: 1.2rem;
-  padding: 10px 0;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+#howToPlayModal ul {
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px;
+  font-family: var(--secondary-font);
+  color: var(--clr-secondary);
+}
+
+#howToPlayModal li {
+  margin-top: 30px;
+}
+
+.highlight {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 2px;
+  color: rgb(191, 250, 191);
 }
 
 /* Footer */
@@ -342,27 +377,6 @@ footer {
   color: var(--clr-secondary);
   padding: 10px 0;
   font-size: 14px;
-}
-
-#headerhowtoplay {
-  font-size: 2.5rem;
-  font-weight: bold;
-  font-family: var(--secondary-font);
-  color: var(--clr-secondary);
-  padding: 10px;
-  border-radius: 5px;
-  height: 85vh;
-}
-
-#headerhowtoplay ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 50px;
-}
-
-#headerhowtoplay li {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
 }
 
 /* Media queries to allow different styles for small screens (tablets and mobile phones) */
