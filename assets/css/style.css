@@ -71,7 +71,8 @@ main {
 }
 
 #paragraph {
-  margin-top: 200px;
+  position: relative;
+  margin-top: 270px;
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
   font-size: 1.5rem;
@@ -79,7 +80,6 @@ main {
   padding: 10px;
   border-radius: 5px;
   max-width: 80%;
-  margin-bottom: 30px;
 }
 
 /* modal styles copied with some code edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
@@ -221,7 +221,8 @@ main img {
 
 /* Button Styles */
 .btncontainer {
-  position: absolute;
+  position: relative;
+  top: 30px;
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
@@ -378,7 +379,6 @@ footer {
 
   #paragraph {
     font-size: 1rem;
-    margin-bottom: 50px;
     padding: 0 10px;
   }
 
@@ -388,7 +388,7 @@ footer {
 
   .button-container {
     padding: 5px 15px;
-    margin-top: 50px;
+    
   }
 
   #btnhowtoplay {
