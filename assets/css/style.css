@@ -230,6 +230,7 @@ main img {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 #answerbuttons .btn {
@@ -388,7 +389,6 @@ footer {
 
   .button-container {
     padding: 5px 15px;
-    
   }
 
   #btnhowtoplay {
@@ -408,4 +408,8 @@ footer {
   #questioncontainer {
     font-size: 16px;
   }
+}
+
+/* Media queries to allow different styles for tablets and above */
+@media (min-width: 768px) {
 }
