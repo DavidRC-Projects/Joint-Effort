@@ -224,11 +224,18 @@ function showQuestions(){
         }
         button.addEventListener("click", selectAnswer);
     });
-    currentQuestionIndex++;
 }
 
 // https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
 
+function nextQuestion() {
+    if (currentQuestionIndex < questions.length - 1) {
+        currentQuestionIndex++;
+        loadQuestion(currentQuestionIndex);
+    } else {
+        endQuiz();
+    }
+}
 
 function selectAnswer(e){
     const selectedBtn = e.target;
