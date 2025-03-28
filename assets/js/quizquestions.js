@@ -210,9 +210,8 @@ function startTimer() {
 
 function showQuestions(){
     resetState();
+
     const currentQuestion = getRandomObject(questions);
-    let currentQuestion = questions[currentQuestionIndex];
-    
     questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
     currentQuestion.answers.forEach(answer => {
