@@ -1,4 +1,4 @@
-// List of quiz questions
+// List of quiz questions in an array with nested objects. Edited from https://www.youtube.com/watch?v=PBcqGxrr9g8.
 const questions = [
     {
         question: "How many bones are there in the spine?",
@@ -184,8 +184,8 @@ const questions = [
 const questionElement = document.getElementById("questioncontainer");
 const answerButtons = document.getElementById("answerbuttons");
 const nextButton = document.getElementById("nextbutton");
-const scoreElement = document.getElementById("score"); // To get score display
-const form = document.getElementById("usernameForm");
+const scoreElement = document.getElementById("score"); 
+const form = document.getElementById("usernameForm");  
 const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
@@ -194,9 +194,13 @@ let score = 0;
 let sec = 60;
 let timer;
 
-// https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn
 const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array
 
+/**
+ * This function generates a random index and checks if the index has already been selected
+ * When index has already been used it will call getRandomObject again and if not used will add to selectedQuestions
+ * https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn
+*/
 const getRandomObject = (arr) => {
     const randomIndex = getRandomIndex(arr);
     if (selectedQuestions.includes(randomIndex)) {
@@ -205,13 +209,24 @@ const getRandomObject = (arr) => {
       selectedQuestions.push(randomIndex);
   return arr[randomIndex];
 };
-
+/**
+ * This function resets the quiz before the next question is displayed to make sure only the current questions are showing
+ * It uses the method removeChild to remove the child elements from the parent
+ * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8
+*/
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
+/**
+ * This function starts by reseting the score, index and timer when the quiz starts
+ * After reseting the functions of resetstate, show question and startTimer are called 
+ * A next button appears after clicking on an answer button
+ * The form and highscores button are hidden at the start of the quiz 
+ * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8
+*/
 
 function startQuiz(){
     currentQuestionIndex = 0;
@@ -219,16 +234,20 @@ function startQuiz(){
     sec = 60;
     scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
+    
     resetState();
     showQuestions();
     startTimer();
 
-    // Hides the form and highscores button when quiz starts
     form.style.display = "none";
     highScoreButton.style.display = "none";
-    form.style.display = "none";
 }
 
+/**
+ * This function resets the quiz before the next question is displayed to make sure only the current questions are showing
+ * It uses the method removeChild to remove the child elements from the parent
+ * 
+*/
 function startTimer() {
     const timerElement = document.getElementById("timer");
     
@@ -239,7 +258,7 @@ function startTimer() {
     timer = setInterval(function () {
         timerElement.innerHTML = sec + " sec left";
 
-        if (sec === 10) {
+        if (sec === 10 || sec === 9 || sec === 8) {
             timerElement.innerHTML += " - Hurry! Only 10 seconds left!";
         }
 
