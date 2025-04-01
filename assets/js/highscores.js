@@ -1,6 +1,5 @@
-/**
- * Event listener triggers function when 'high scores' button is clicked, making the high scores container appear in the centre of the screen
- */
+//Event listener triggers function when highscores button is clicked, making the high scores container appear in the centre of the screen.
+
 const highScoresButton = document.getElementById("highscores");
 const highScoresModal = document.getElementById("highScoresModal");
 const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
@@ -11,7 +10,10 @@ highScoresButton.addEventListener("click", openHighScoresModal);
 closeHighScoresButton.addEventListener("click", closeHighScoresModal);
 overlay.addEventListener("click", closeHighScoresModal);
 
-// Function to open modal
+/**
+ * This function opens highscores modal when event listener is triggered by click.
+ * Adds 'active' class for model to appear and overlay to make the modal more visible for user experience.
+ */
 function openHighScoresModal() {
   highScoresModal.classList.add("active");
   overlay.classList.add("active");
@@ -35,15 +37,16 @@ function displayHighScores() {
   console.log("Displayed High Scores:", highScores);
 }
 
-// Function to close modal
+/**
+ * This functions closes the highscores modal.
+ * The modal and overlay is removed when close button is clicked.
+ */
 function closeHighScoresModal() {
   highScoresModal.classList.remove("active");
   overlay.classList.remove("active");
 }
 
-/**
- * Function to change style of 'How to Play' button when hovered over
- */
+// Event listeners created to change style of 'highScoresButton' button when hovered over.
 highScoresButton.addEventListener("mouseover", function () {
   highScoresButton.style.backgroundColor = "#000000";
 });
