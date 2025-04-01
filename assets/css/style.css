@@ -435,23 +435,23 @@ footer {
 /* Media queries to allow different styles for desktop and larger screens */
 @media (min-width: 992px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   #homepageh2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0 10px;
     margin-bottom: 10px;
     
   }
 
   #paragraph {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 0 10px;
   }
 
   .btn {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .button-container {
@@ -459,38 +459,70 @@ footer {
     margin-top: 70px;
   }
   #howToPlayh2, #finalscore, #btnhowtoplay {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   #questioncontainer {
-    font-size: 24px;
-    margin-top: 100px;
+    font-size: 20px;
+    margin-top: 65px;
   }
   .close-button {
-    font-size: 24px;
-    width: 40%;
+    font-size: 20px;
   }
   #nextbutton,  #highscorebtn, #score, #timer, #questioncontainer {
     font-size: 32px;
+  }
+
+  #usernameForm button, #username {
+    font-size: 1.25rem;
+  }
+  #usernameForm {
+    font-size: 1.25rem;
+    width: 50vh;
+  }
+  .correct {
+    font-size: 30px !important;
+  }
+  .highlight {
+    font-size: 1.25rem;
+  }
+  #highScoresModal li, #howToPlayModal ul {
+    font-size: 0.75rem;
+  }
+}
+
+/* Styles for screens extra large */
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  #homepageh2 {
+    font-size: 3rem;
+  }
+
+  #paragraph, #howToPlayh2, #finalscore, #btnhowtoplay, .btn {
+    font-size: 2rem;
+  }
+  #questioncontainer, .close-button {
+    font-size: 24px;
+  }
+  #nextbutton,  #highscorebtn, #score, #timer, #questioncontainer {
+    font-size: 36px;
   }
   #usernameForm button, #username {
     font-size: 1.5rem;
   }
   #usernameForm {
-    font-size: 2rem;
-    width: 50vh;
+    font-size: 1.5rem;
   }
   .correct {
-    font-size: 40px !important;
+    font-size: 36px !important;
   }
   .highlight {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
-  #highScoresModal li {
-    font-size: 1rem;
-  }
-  
-  #howToPlayModal ul {
-    font-size: 1rem;
+  #highScoresModal li, #howToPlayModal ul {
+    font-size: 1.75rem;
   }
 }

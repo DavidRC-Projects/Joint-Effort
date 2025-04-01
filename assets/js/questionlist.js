@@ -144,7 +144,7 @@ const questions = [
         ]
     },
     {
-        question: "What is the name of the bone located in the elbow joint that connects the upper arm to the forearm?",
+        question: "Name the bone in the elbow joint that connects the upper arm to the forearm?",
         answers: [
             { text: "Humerus", correct: true },
             { text: "Ulna", correct: false },
@@ -171,7 +171,7 @@ const questions = [
         ]
     },
     {
-        question: "Which bone in the elbow acts as a hinge, allowing the arm to bend and straighten?",
+        question: "What elbow bone acts as a hinge, allowing the arm to bend and straighten?",
         answers: [
             { text: "Ulna", correct: true },
             { text: "Radius", correct: false },

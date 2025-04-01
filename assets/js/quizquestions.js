@@ -16,6 +16,7 @@ const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This 
 /**
  * This function generates a random index and checks if the index has already been selected.
  * When index has already been used it will call getRandomObject again and if not used will add to selectedQuestions.
+ * When 15 questions have been selected the selectedQuestions and score will reset to 0.
  * Edited code from https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn.
 */
 const getRandomObject = (arr) => {
@@ -194,9 +195,6 @@ function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of 15`;
     form.style.display = "block";
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
-    highScoreButton.style.display = "block";
     localStorage.setItem("score", score);
     currentQuestionIndex = 0;
 
@@ -211,6 +209,9 @@ function showScore() {
             saveHighScore(userInput, score);
             alert(`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`);
             form.style.display = "none";
+            nextButton.style.display = "block";
+            nextButton.innerHTML = "Play Again";
+            highScoreButton.style.display = "block";
         }
     });
 };
