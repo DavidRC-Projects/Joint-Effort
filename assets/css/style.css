@@ -82,6 +82,23 @@ main {
   max-width: 80%;
 }
 
+/* How to play styles for h2 element and span elements */
+#howToPlayh2 {
+  margin-top: 20px;
+  color: var(--clr-secondary);
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.highlight {
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 2px;
+  color: rgb(191, 250, 191);
+}
+
 /* modal styles edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
 .modal {
   position: fixed;
@@ -104,19 +121,6 @@ main {
 
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
-}
-
-main img {
-  display: none;
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  border-radius: 10px;
-  border: 2px solid green;
-  overflow: hidden;
-  object-fit: cover;
 }
 
 #quiz-intro {
@@ -267,6 +271,44 @@ main img {
   color: var(--clr-primary);
 }
 
+#highscorebtn {
+  display: none;
+  margin-top: 50px;
+  width: 50%;
+  font-family: var(--clr-secondary);
+  font-size: 16px;
+  margin-top: 25px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+}
+
+#highscorebtn:hover{
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+.close-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  color: var(--clr-secondary);
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  padding: 4px 20px;
+  background-color: var(--clr-primary);
+  border-radius: 5px;
+  box-shadow: 2px 2px 0px var(--clr-primary);
+}
+
+.close-button:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
 .startquizbtn {
   display: none;
 }
@@ -291,26 +333,6 @@ main img {
   align-items: center;
 }
 
-.close-button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30%;
-  color: var(--clr-secondary);
-  font-family: var(--secondary-font);
-  font-size: 16px;
-  padding: 4px 20px;
-  background-color: var(--clr-primary);
-  border-radius: 5px;
-  box-shadow: 2px 2px 0px var(--clr-primary);
-}
-
-.close-button:hover {
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
-}
-
 /* Styles for answer buttons when correct and incorrect */
 .correct {
   background-color: green !important;
@@ -324,31 +346,14 @@ main img {
   transition: 100ms;
 }
 
-#highscorebtn {
-  display: none;
-  margin-top: 50px;
-  width: 50%;
-  font-family: var(--clr-secondary);
-  font-size: 16px;
-  margin-top: 25px;
-  padding: 5px 25px;
-  border-radius: 5px;
-  background-color: var(--clr-primary);
+/* Styles for content inside modals */
+#highScoresModal li {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 15px;
+  font-family: var(--secondary-font);
   color: var(--clr-secondary);
-}
-
-#highscorebtn:hover{
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
-}
-
-#howToPlayh2 {
-  margin-top: 20px;
-  color: var(--clr-secondary);
-  font-family: var(--primary-font);
-  font-size: 1.2rem;
-  font-weight: 800;
-  text-decoration: underline;
+  list-style-position: inside;
 }
 
 #howToPlayModal ul {
@@ -362,23 +367,6 @@ main img {
 
 #howToPlayModal li {
   margin-top: 30px;
-}
-
-.highlight {
-  font-weight: 700;
-  font-size: 0.9rem;
-  padding: 2px;
-  color: rgb(191, 250, 191);
-}
-
-/* Styles for content inside highscores modal */
-#highScoresModal li {
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 15px;
-  font-family: var(--secondary-font);
-  color: var(--clr-secondary);
-  list-style-position: inside;
 }
 
 /* Footer */
@@ -434,6 +422,6 @@ footer {
   }
 }
 
-/* Media queries to allow different styles for tablets and above */
-@media (min-width: 768px) {
+/* Media queries to allow different styles for desktop and larger screens */
+@media (min-width: 992px) {
 }
