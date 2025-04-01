@@ -189,17 +189,17 @@ const form = document.getElementById("usernameForm");
 const highScoreButton = document.getElementById("highscorebtn");
 
 let currentQuestionIndex = 0;
-let selectedQuestions = []; // track questions and avoid duplicating the questions
+let selectedQuestions = []; // track questions and avoid duplicating the questions.
 let score = 0;
 let sec = 60;
 let timer;
 
-const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array
+const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array.
 
 /**
- * This function generates a random index and checks if the index has already been selected
- * When index has already been used it will call getRandomObject again and if not used will add to selectedQuestions
- * https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn
+ * This function generates a random index and checks if the index has already been selected.
+ * When index has already been used it will call getRandomObject again and if not used will add to selectedQuestions.
+ * https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn.
 */
 const getRandomObject = (arr) => {
     const randomIndex = getRandomIndex(arr);
@@ -209,10 +209,11 @@ const getRandomObject = (arr) => {
       selectedQuestions.push(randomIndex);
   return arr[randomIndex];
 };
+
 /**
- * This function resets the quiz before the next question is displayed to make sure only the current questions are showing
- * It uses the method removeChild to remove the child elements from the parent
- * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8
+ * This function resets the quiz before the next question is displayed to make sure only the current questions are showing.
+ * It uses the method removeChild to remove the child elements from the parent.
+ * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8.
 */
 function resetState(){
     nextButton.style.display = "none";
@@ -220,14 +221,14 @@ function resetState(){
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
-/**
- * This function starts by reseting the score, index and timer when the quiz starts
- * After reseting the functions of resetstate, show question and startTimer are called 
- * A next button appears after clicking on an answer button
- * The form and highscores button are hidden at the start of the quiz 
- * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8
-*/
 
+/**
+ * This function starts by reseting the score, index and timer when the quiz starts.
+ * After reseting the functions of resetstate, show question and startTimer are called .
+ * A next button appears after clicking on an answer button.
+ * The form and highscores button are hidden at the start of the quiz .
+ * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8.
+*/
 function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
@@ -244,9 +245,9 @@ function startQuiz(){
 }
 
 /**
- * This function resets the quiz before the next question is displayed to make sure only the current questions are showing
- * It uses the method removeChild to remove the child elements from the parent
- * 
+ * This function resets the quiz before the next question is displayed to make sure only the current questions are showing.
+ * It uses the method removeChild to remove the child elements from the parent.
+ * Edited code from https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz.
 */
 function startTimer() {
     const timerElement = document.getElementById("timer");
@@ -259,9 +260,8 @@ function startTimer() {
         timerElement.innerHTML = sec + " sec left";
 
         if (sec === 10 || sec === 9 || sec === 8) {
-            timerElement.innerHTML += " - Hurry! Only 10 seconds left!";
+            timerElement.innerHTML += " - Hurry! you don't have much time left!";
         }
-
         if (sec === 0) {
             clearInterval(timer);
             showScore();
@@ -270,6 +270,16 @@ function startTimer() {
         }
     }, 1000);
 };
+
+
+/**
+ * This function will display a new question question and answer choices.
+ * It uses the currentQuestion variable to store the selected question. This will set the question number and adds the current question.
+ * The foreach method is used go through each answer item in the array and will create a button.
+ * When an answer is correct a data attribute is added to the button.
+ * An event listener is added to each button to respond when clicked.
+ * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8.
+*/
 
 function showQuestions(){
     resetState();
@@ -289,7 +299,14 @@ function showQuestions(){
     });
 }
 
-// https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz
+
+/**
+ * This function moves to the next question in the quiz.
+ * It checks if there are more questions left in the 'questions' array.
+ * It retrieves the current question and displays it then increments the 'currentQuestionIndex' to move to the next question.
+ * If there are no more questions, it calls 'showScore()' and displays final score.
+ * Copied from
+*/
 
 function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
@@ -301,6 +318,14 @@ function nextQuestion() {
     }
 }
 
+/**
+ * This function handles the user's answer selection during the quiz.
+ * It retrieves the button that was clicked and checks if the selected answer is correct by reading 'dataset.correct.
+ * When the button is correct it will be styled green and then increase the score by 1.
+ * When the button is incorrect it will turn red and the correct answer will turn green using a forEach method.
+ * All buttons are disabled after selecting an answer and the next button will appear.
+ * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8.
+*/
 function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -320,9 +345,13 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 };
 
-// https://stackoverflow.com/questions/47817325/storing-my-game-score-in-local-storage
-//https://www.youtube.com/watch?v=rsWhJ2XviE4 
-
+/**
+ * This function saves the user's high score to local storage and reads them as an array. If no score exists then it will have an empty array.
+ * This creates an object containing the player's name and score and the new score is added to the highscore array.
+ * The array methods .sort and .splice sorts the array in descending order and allows only 10 highscores.
+ * Each highscore is saved to the local storage using the JSON stringify to convert the array to a string.
+ * Edited from https://www.youtube.com/watch?v=rsWhJ2XviE4.
+*/
 function saveHighScore(username, score) {
     let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
     const newScore = { name: username, score: score };
@@ -332,9 +361,16 @@ function saveHighScore(username, score) {
     highScores.splice(10);
     
     localStorage.setItem("highScores", JSON.stringify(highScores));
-    console.log("High Scores Updated:", highScores);
 }
 
+/**
+ * This function displays the user's final score and resets the quiz state.
+ * Resets previous questions and current question index and then displays a final score.
+ * Saves the score to the local storage.
+ * The form will appear with an event listener to click submit. This checks if the user has entered a name and shows an alert if empty. If characters are entered, it will thank the user and save to highscores.
+ * The form is hidden after submission.
+ * Copied from
+*/
 function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of 15`;
@@ -360,7 +396,12 @@ function showScore() {
     });
 };
 
-function handleNextButton(){
+/**
+ * This function handles the next and play again button.
+ * It increments 'currentQuestionIndex' to move to the next question when clicked.
+ * When current question reaches 15 it calls 'showQuestions'. At this point the timer will stop and 'showScore' is called to display the final score. 
+*/
+function NextPlayButton(){
     currentQuestionIndex++;
     if(currentQuestionIndex < 15) {
         showQuestions();
@@ -372,9 +413,9 @@ function handleNextButton(){
 
 nextButton.addEventListener("click", ()=>{
     if (nextButton.innerHTML === "Play Again") {
-        startQuiz();  // Restart the quiz if "Play Again" is displayed
+        startQuiz();
     } else {
-        handleNextButton();
+        NextPlayButton();
     }
 });
 

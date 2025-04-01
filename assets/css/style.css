@@ -82,7 +82,7 @@ main {
   max-width: 80%;
 }
 
-/* modal styles copied with some code edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
+/* modal styles edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
 .modal {
   position: fixed;
   top: 50%;
