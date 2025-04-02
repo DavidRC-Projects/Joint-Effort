@@ -1,9 +1,12 @@
+import { questions } from "./questionlist.js";
+
 const questionElement = document.getElementById("questioncontainer");
 const answerButtons = document.getElementById("answerbuttons");
 const nextButton = document.getElementById("nextbutton");
 const scoreElement = document.getElementById("score"); 
 const form = document.getElementById("usernameForm");  
 const highScoreButton = document.getElementById("highscorebtn");
+
 
 let currentQuestionIndex = 0;
 let selectedQuestions = []; // track questions and avoid duplicating the questions.
@@ -26,7 +29,6 @@ const getRandomObject = (arr) => {
       }
       if (selectedQuestions.length >= 14) {
         selectedQuestions = [];
-        score = 0;
       }
       selectedQuestions.push(randomIndex);
   return arr[randomIndex];

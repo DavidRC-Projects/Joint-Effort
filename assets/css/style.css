@@ -366,6 +366,12 @@ main {
   list-style-position: inside;
 }
 
+/* Gold - 1st Place */
+#highscorelist li:first-child {
+  color: gold;
+  font-weight: bold;
+}
+
 #howToPlayModal ul {
   list-style: none;
   font-size: 0.8rem;

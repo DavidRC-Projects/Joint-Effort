@@ -1,5 +1,5 @@
 // List of quiz questions in an array with nested objects. Edited from https://www.youtube.com/watch?v=PBcqGxrr9g8.
-const questions = [
+export const questions = [
     {
         question: "How many bones are there in the spine?",
         answers: [
