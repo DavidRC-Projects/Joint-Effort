@@ -9,7 +9,7 @@ const highScoreButton = document.getElementById("highscorebtn");
 
 
 let currentQuestionIndex = 0;
-let selectedQuestions = []; // track questions and avoid duplicating the questions.
+let selectedQuestions = [];
 let score = 0;
 let sec = 60;
 let timer;
@@ -19,7 +19,7 @@ const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This 
 /**
  * This function generates a random index and checks if the index has already been selected.
  * When index has already been used it will call getRandomObject again and if not used will add to selectedQuestions.
- * When 15 questions have been selected the selectedQuestions and score will reset to 0.
+ * When 15 questions have been selected the selectedQuestions will reset.
  * Edited code from https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn.
 */
 const getRandomObject = (arr) => {
@@ -122,7 +122,6 @@ function showQuestions(){
         button.addEventListener("click", selectAnswer);
     });
 }
-
 
 /**
  * This function moves to the next question in the quiz.

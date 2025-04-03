@@ -59,3 +59,13 @@ I have used the following hex colors taken from the background image on the home
 
 ![colourscheme](/assets/images/colourpicker.png)
 
+### Typography
+
+I have used google fonts to import all fonts on the site.
+
+The Merriweather font was used as the primary font, with Poppins as the secondary font. Both are sans-serif fonts that improve readability and gives an academic feel.
+
+### Wireframes
+
+I created wireframes for mobile, tablet and desktop using figma.
+
