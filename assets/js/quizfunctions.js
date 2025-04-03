@@ -124,23 +124,6 @@ function showQuestions(){
 }
 
 /**
- * This function moves to the next question in the quiz.
- * It checks if there are more questions left in the 'questions' array.
- * It retrieves the current question and displays it then increments the 'currentQuestionIndex' to move to the next question.
- * If there are no more questions, it calls 'showScore()' and displays final score.
-*/
-
-function nextQuestion() {
-    if (currentQuestionIndex < questions.length) {
-        const currentQuestion = questions[currentQuestionIndex];
-        displayQuestion(currentQuestion);
-        currentQuestionIndex++;
-    } else {
-        showScore();
-    }
-}
-
-/**
  * This function handles the user's answer selection during the quiz.
  * It retrieves the button that was clicked and checks if the selected answer is correct by reading 'dataset.correct.
  * When the button is correct it will be styled green and then increase the score by 1.
