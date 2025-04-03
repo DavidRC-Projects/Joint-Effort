@@ -6,6 +6,10 @@ The joint effort quiz is to be designed for physiotherapy students and anyone in
 
 Add image of reseponsive mock up.
 
+![wireframehomepage](/assets/images/responsivemockup.png)
+
+## CONTENTS
+
 Link to [responsive Mockup] https://ui.dev/amiresponsive?url=https://davidrc-projects.github.io/Joint-Effort/
 
 ## CONTENTS
@@ -32,3 +36,26 @@ Link to [responsive Mockup] https://ui.dev/amiresponsive?url=https://davidrc-pro
 #### Frequant Visitor Goals
 • I would like to earn trophies for achieving a top 3 score.
 • I want to practice a variety of questions to improve my anatomy knowledge.
+
+#### Owner Goals
+• I want to create an interactive quiz that helps physiotherapy students and any anatomy enthusiasts that can improve or refresh their anatomy knowledge.
+• I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
+• I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
+
+## CONTENTS
+
+* [User Experience](#user-experience)
+* [User Stories](#user-stories)
+
+## Design
+
+* [Colour Scheme](#colour-scheme)
+* [Typography](#typography)
+* [Wireframes](#wireframes)
+
+### Colour Scheme
+
+I have used the following hex colors taken from the background image on the homepage:
+
+![colourscheme](/assets/images/colourpicker.png)
+

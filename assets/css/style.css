@@ -370,6 +370,7 @@ main {
 #highscorelist li:first-child {
   color: gold;
   font-weight: bold;
+  font-size: 1rem;
 }
 
 #howToPlayModal ul {
