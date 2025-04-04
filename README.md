@@ -69,3 +69,6 @@ The Merriweather font was used as the primary font, with Poppins as the secondar
 
 I created wireframes for mobile, tablet and desktop using figma.
 
+
+Used for redirect
+https://stackoverflow.com/questions/9276817/301-redirect-for-site-hosted-at-github
