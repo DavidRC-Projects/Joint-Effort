@@ -82,6 +82,31 @@ main {
   max-width: 80%;
 }
 
+/* 404page styles */
+.p404 {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 36px;
+  color: var(--clr-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  transform: translateY(-10%);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#container404 {
+  background-color: var(--bg-opacity);
+}
+
+.btn-404:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
 /* modal styles edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
 .modal {
   position: fixed;
