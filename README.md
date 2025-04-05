@@ -8,50 +8,65 @@ Add image of reseponsive mock up.
 
 ![wireframehomepage](/assets/images/responsivemockup.png)
 
-## CONTENTS
-
 Link to [responsive Mockup] https://ui.dev/amiresponsive?url=https://davidrc-projects.github.io/Joint-Effort/
 
 ## CONTENTS
-
 * [User Experience](#user-experience)
 * [User Stories](#user-stories)
 
-## User Experience (UX)
+## Design
+* [Colour Scheme](#colour-scheme)
+* [Typography](#typography)
+* [Wireframes](#wireframes)
 
-### User Stories
+## Features
+* [Existing Features](#existing-features)
+* [Accessibility](#accessibility)
+* [Future Implementation](#future-implementations)
 
-#### First Time Visitor Goals
+## Testing
+* [Testing](#testing)
+
+## Deployment and Local Deployment
+* [Deployment & Local Development](#deployment-and-local-development)
+* [Deployment](#deployment)
+* [Local Development](#local-development)
+* [How to Fork](#how-to-fork)
+* [How to Clone](#how-to-clone)
+
+## Technologies Used
+* [Technologies Used](#technologies-used)
+* [Languages Used](#languages-used)
+* [Programs and Sites Used](#programs-used)
+
+## Credits and Acknowledgements
+* [Credits](#credits)
+* [Acknowledgments](#acknowledgments)
+
+### User Experience (UX)
+
+#### User Stories
+
+##### First Time Visitor Goals
 • I am a physiotherapy student looking for an engaging way to test and improve my anatomy knowledge.
 • I want the quiz to challange my anatomy knowledge
 • The site should be user-friendly, well-structured, and fully responsive across different devices.
 • I want to see how many questions i answered correctly and view my total score at the end.
 • Before starting the quiz, I would like clear instructions on how to play.
 
-#### Returning Visitor Goals
+##### Returning Visitor Goals
 • I want to replay the quiz to see if i can improve my score.
 • I would like to track my best score and aim to beat my previous results.
 • I would like the quiz to be easy to navigate so i can check the highscores.
 
-#### Frequant Visitor Goals
+##### Frequant Visitor Goals
 • I would like to earn trophies for achieving a top 3 score.
 • I want to practice a variety of questions to improve my anatomy knowledge.
 
-#### Owner Goals
+##### Owner Goals
 • I want to create an interactive quiz that helps physiotherapy students and any anatomy enthusiasts that can improve or refresh their anatomy knowledge.
 • I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
 • I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
-
-## CONTENTS
-
-* [User Experience](#user-experience)
-* [User Stories](#user-stories)
-
-## Design
-
-* [Colour Scheme](#colour-scheme)
-* [Typography](#typography)
-* [Wireframes](#wireframes)
 
 ### Colour Scheme
 
@@ -72,3 +87,44 @@ I created wireframes for mobile, tablet and desktop using figma.
 
 Used for redirect
 https://stackoverflow.com/questions/9276817/301-redirect-for-site-hosted-at-github
+
+### Existing Features
+
+The website has been designed with a homepage and a custom 404 error page. No additional pages were created instead, modals are used throughout to create a more streamlined and user-friendly experience.
+
+Homepage: 
+This is the main landing page where users interested in learning anatomy can get an overview of the quiz. It provides options to start the quiz, view instructions on how to play, and check the high scores.
+
+404 Error Page: 
+If a user mistypes the URL, they are automatically redirected back to the homepage after 3 seconds. The page also provides feedback to inform the user that they are being redirected, helping maintain a smooth user experience.
+
+Favicon and Title:
+A favicon appears in the browser tab for easy recognition.
+
+The site title is displayed at the top of the page and also acts as a clickable link that navigates back to the homepage. The footer is at the bottom of the page and mainstains a consistent deisgn that is resposnive to mobile, tablet and desktop devices.
+
+Welcome Message:
+Introduces the user to the quiz, giving them a clear understanding of the topic they will be tested on.
+
+Play Now Modal:
+This modal allows users to begin the quiz. It presents the questions, multiple-choice answers, score, and a countdown timer within the quiz interface.
+
+Question Display - Shows one question at a time with multiple-choice answers.
+
+Score and Timer display - Displays the current score and remaining time. When the timer reaches 10 seconds, a warning message appears encouraging the user to hurry. The quiz ends after 60 seconds, at which point the user’s score is shown along with a username input form.
+
+Next Button - Appears after a user answers a question, allowing them to proceed to the next one.
+
+Username Form - Appears at the end of the quiz. If no username is submitted, an error message is displayed. When a username is entered, the user receives a confirmation message and is advised to check the high scores or play again.
+
+Play Again Button - Appears once a valid username has been entered, allowing the user to restart the quiz.
+
+Highscores Button - Also appears after a username has been submitted and opens the High Scores modal.
+
+How to Play Modal:
+This modal provides clear instructions on how to play the quiz. Key information is highlighted using <span> elements to draw the user's attention to important details.
+
+Highscores Modal:
+This modal displays the top scores submitted by users who have completed the quiz. An ordered list shows usernames and their corresponding scores. High scores can be accessed both before starting the quiz and after it is completed.
+
+Close Button - Each modal includes a close button that allows users to exit the modal and return to the main interface.
