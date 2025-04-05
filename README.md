@@ -111,7 +111,7 @@ This modal allows users to begin the quiz. It presents the questions, multiple-c
 
 Question Display - Shows one question at a time with multiple-choice answers.
 
-Score and Timer display - Displays the current score and remaining time. When the timer reaches 10 seconds, a warning message appears encouraging the user to hurry. The quiz ends after 60 seconds, at which point the user’s score is shown along with a username input form.
+Score and Timer display - Displays the current score and remaining time. When the timer reaches 10 seconds, a warning message appears encouraging the user to hurry. The quiz ends after 60 seconds, at which point the user’s score is shown along with a username input form. The score increases in increments of 1 when an answer is correct.
 
 Next Button - Appears after a user answers a question, allowing them to proceed to the next one.
 
@@ -128,3 +128,23 @@ Highscores Modal:
 This modal displays the top scores submitted by users who have completed the quiz. An ordered list shows usernames and their corresponding scores. High scores can be accessed both before starting the quiz and after it is completed.
 
 Close Button - Each modal includes a close button that allows users to exit the modal and return to the main interface.
+
+## Accessibility
+
+### General Site Strucutre
+
+The homepage includes a favicon, the site title "Joint Effort", and a heading (<h1>) with an accompanying paragraph. It also features three clearly labeled buttons that open modals for playing the quiz, viewing instructions, and checking high scores.
+
+### Buttons
+
+The buttons on the homepage (Play Now, How to Play, and High Scores) maintain a consistent and accessible design. They are fully responsive across all screen sizes. JavaScript is used to provide visual feedback such as background and text colour changes when a user hovers over a button.
+
+### Modals
+
+Each modal opens with a smooth transition effect. An overlay appears behind the modal, dimming the background to help users focus on the active content. Users can close the modal by either clicking the close button or clicking anywhere outside the modal area on the overlay.
+
+### Hover effects
+The Close, Play Now, and High Scores buttons include CSS hover effects that change both the background and text color to provide visual feedback to users.
+
+### Answer Buttons
+When a user selects an incorrect answer, the selected button turns red to indicate the mistake, while the correct answer is highlighted in green. This provides immediate feedback, showing which answer was correct and which was not. If the user selects the correct answer, only the green highlighted button is displayed. Once an answer is chosen, all other answer buttons are disabled to prevent further changes. A "Next" button then appears, allowing the user to proceed to the following question. The user's score increases by 1 for each correct answer.
