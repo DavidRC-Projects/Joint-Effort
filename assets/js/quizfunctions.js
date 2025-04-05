@@ -188,10 +188,18 @@ function showScore() {
         const userInput = form.username.value.trim();
 
         if (userInput === "") {
-            alert("Please enter your username before ending the quiz!");
+            Swal.fire({
+                title: "Error",
+                text: "Please enter your username before ending the quiz!",
+                icon: "error"
+              });
         } else {
             saveHighScore(userInput, score);
-            alert(`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`);
+            Swal.fire({
+                title: "Congragulations",
+                text: (`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`),
+                icon: "success"
+            });
             form.style.display = "none";
             nextButton.style.display = "block";
             nextButton.innerHTML = "Play Again";
