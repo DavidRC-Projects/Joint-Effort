@@ -37,9 +37,8 @@ const getRandomObject = (arr) => {
 /**
  * This function resets the quiz before the next question is displayed to make sure only the current questions are showing.
  * It uses the method removeChild to remove the child elements from the parent.
- * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8.
 */
-function resetState(){
+function clearQuestions(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild);
@@ -48,7 +47,7 @@ function resetState(){
 
 /**
  * This function starts by reseting the score, index and timer when the quiz starts.
- * After reseting the functions of resetstate, show question and startTimer are called .
+ * After reseting the functions of clearQuestions, show question and startTimer are called .
  * A next button appears after clicking on an answer button.
  * The form and highscores button are hidden at the start of the quiz .
  * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8.
@@ -60,7 +59,7 @@ function startQuiz(){
     scoreElement.textContent = `Score: ${score}`;
     nextButton.innerHTML = "Next";
     
-    resetState();
+    clearQuestions();
     showQuestions();
     startTimer();
 
@@ -106,7 +105,7 @@ function startTimer() {
 */
 
 function showQuestions(){
-    resetState();
+    clearQuestions();
 
     const currentQuestion = getRandomObject(questions);
     questionElement.innerHTML = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
@@ -119,7 +118,7 @@ function showQuestions(){
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener("click", answerSelect);
     });
 }
 
@@ -129,9 +128,8 @@ function showQuestions(){
  * When the button is correct it will be styled green and then increase the score by 1.
  * When the button is incorrect it will turn red and the correct answer will turn green using a forEach method.
  * All buttons are disabled after selecting an answer and the next button will appear.
- * Copied from https://www.youtube.com/watch?v=PBcqGxrr9g8.
 */
-function selectAnswer(e){
+function answerSelect(e){
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -176,7 +174,7 @@ function saveHighScore(username, score) {
  * The form is hidden after submission.
 */
 function showScore() {
-    resetState();
+    clearQuestions();
     questionElement.innerHTML = `You scored ${score} out of 15`;
     form.style.display = "block";
     localStorage.setItem("score", score);

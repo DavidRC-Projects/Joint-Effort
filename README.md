@@ -84,10 +84,6 @@ The Merriweather font was used as the primary font, with Poppins as the secondar
 
 I created wireframes for mobile, tablet and desktop using figma.
 
-
-Used for redirect
-https://stackoverflow.com/questions/9276817/301-redirect-for-site-hosted-at-github
-
 ### Existing Features
 
 The website has been designed with a homepage and a custom 404 error page. No additional pages were created instead, modals are used throughout to create a more streamlined and user-friendly experience.
@@ -122,7 +118,7 @@ Play Again Button - Appears once a valid username has been entered, allowing the
 Highscores Button - Also appears after a username has been submitted and opens the High Scores modal.
 
 How to Play Modal:
-This modal provides clear instructions on how to play the quiz. Key information is highlighted using <span> elements to draw the user's attention to important details.
+This modal provides clear instructions on how to play the quiz. Key information is highlighted using span elements to draw the user's attention to important details.
 
 Highscores Modal:
 This modal displays the top scores submitted by users who have completed the quiz. An ordered list shows usernames and their corresponding scores. High scores can be accessed both before starting the quiz and after it is completed.
@@ -133,7 +129,7 @@ Close Button - Each modal includes a close button that allows users to exit the 
 
 ### General Site Strucutre
 
-The homepage includes a favicon, the site title "Joint Effort", and a heading (<h1>) with an accompanying paragraph. It also features three clearly labeled buttons that open modals for playing the quiz, viewing instructions, and checking high scores.
+The homepage includes a favicon, the site title "Joint Effort", and a heading h1 with an accompanying paragraph. It also features three clearly labeled buttons that open modals for playing the quiz, viewing instructions, and checking high scores.
 
 ### Buttons
 
@@ -148,3 +144,17 @@ The Close, Play Now, and High Scores buttons include CSS hover effects that chan
 
 ### Answer Buttons
 When a user selects an incorrect answer, the selected button turns red to indicate the mistake, while the correct answer is highlighted in green. This provides immediate feedback, showing which answer was correct and which was not. If the user selects the correct answer, only the green highlighted button is displayed. Once an answer is chosen, all other answer buttons are disabled to prevent further changes. A "Next" button then appears, allowing the user to proceed to the following question. The user's score increases by 1 for each correct answer.
+
+## Future Implementations
+
+1. Keyboard Accessibility
+I plan to enhance the site’s accessibility by ensuring all interactive elements like modals, buttons, and quiz controls can be fully accessed and operated using the keyboard alone. Users will be able to open modals with keyboard shortcuts, navigate answer choices using arrow keys, and close modals with the Esc key.
+
+2. Achievement Trophies for Top Scores
+I’d like to introduce a reward system that shows trophies or badges for the top three scores on the leaderboard. For example, gold, silver, and bronze icons could be displayed next to usernames to create a sense of accomplishment and encourage friendly competition.
+
+3. Expanded Question Pool
+In the future, I plan to add more quiz questions to increase variety and keep the experience fresh for returning users. I may also organise questions by difficulty or topic—such as upper limb, lower limb, or axial skeleton—to allow users to target specific areas of anatomy.
+
+4. Practice Mode for Incorrect Answers
+I’d like to implement a “Practice Mode” that stores questions users get wrong and allows them to revisit and practice those specific questions. This feature would help reinforce learning by focusing on areas that need improvement.
