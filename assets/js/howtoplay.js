@@ -2,11 +2,9 @@
 const howToPlayButton = document.getElementById("howtoplay");
 const howToPlayModal = document.getElementById("howToPlayModal");
 const closeHowToPlayButton = howToPlayModal.querySelector("[data-close-button]");
-const overlayHowToPlay = document.getElementById("overlay");
 
 howToPlayButton.addEventListener("click", openHowToPlayModal);
 closeHowToPlayButton.addEventListener("click", closeHowToPlayModal);
-overlay.addEventListener("click", closeHowToPlayModal);
 
 /**
  * This function opens how to play modal when event listener is triggered by click.
@@ -14,7 +12,6 @@ overlay.addEventListener("click", closeHowToPlayModal);
  */
 function openHowToPlayModal() {
   howToPlayModal.classList.add("active");
-  overlay.classList.add("active");
 }
 
 /**
@@ -23,7 +20,6 @@ function openHowToPlayModal() {
  */
 function closeHowToPlayModal() {
   howToPlayModal.classList.remove("active");
-  overlay.classList.remove("active");
 }
 
 // Event listeners created to change style of 'How to Play' button when hovered over.

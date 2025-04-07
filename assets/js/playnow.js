@@ -1,12 +1,10 @@
 const playNowButton = document.getElementById("playnow");
 const playNowModal = document.getElementById("modal");
 const closePlayNowButton = playNowModal.querySelector("[data-close-button]");
-const overlay = document.getElementById("overlay");
 
 //Event listener triggers function when play now button is clicked, making the quiz modal appear in the centre of the screen.
 playNowButton.addEventListener("click", openPlayNowModal);
 closePlayNowButton.addEventListener("click", closePlayNowModal);
-overlay.addEventListener("click", closePlayNowModal);
 
 /**
  * This function opens playnow modal when event listener is triggered by click.
@@ -15,7 +13,6 @@ overlay.addEventListener("click", closePlayNowModal);
  */
 function openPlayNowModal() {
   playNowModal.classList.add("active");
-  overlay.classList.add("active");
   
   // Call startQuiz() to reset questions and timer
   if (typeof startQuiz === 'function') {
@@ -38,7 +35,6 @@ function openPlayNowModal() {
  */
 function closePlayNowModal() {
   playNowModal.classList.remove("active");
-  overlay.classList.remove("active");
 }
 
 // Event listeners created to change style of 'PlayNow' button when hovered over.

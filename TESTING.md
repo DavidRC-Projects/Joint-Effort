@@ -42,7 +42,7 @@ For the 404 error page (mobile), the performance score was initially lower due t
 
 ### Results_W3C_HTML_and_CSS_validator
 
-##### Homepage_Validator - W3C Validation Check
+#### Homepage - W3C Validation Check
 
 There were 3 errors identified, which were corrected as follows:
 
@@ -53,7 +53,7 @@ After the above changes the validation passed. Please see homepage validation er
 
 ![wc3checkindex](assets/images/htmlvalidationhomepage.png)
 
-##### 404 page - W3C Validation Check
+#### 404 page - W3C Validation Check
 
 There was 1 error identified, which was corrected as follows:
 
@@ -63,6 +63,34 @@ After the above changes the validation passed. Please see homepage validation er
 
 ![wc3checkindex](assets/images/htmlvalidation404.png)
 
-#### CSS validator
+#### CSS validaton check
+
+No errors were found with the css code on validation checks.
 
 [Back to Top](#contents)
+
+#### Jshint validaton check
+
+#### highscores.js
+
+JSHint validation found 2 errors in the highscores.js file. These were resolved as follows:
+
+1. Removed an unnecessary semicolon to improve code clarity and follow JavaScript best practices.
+
+2. Fixed an undefined variable error by declaring overlay properly by replacing the variable overlayHighScores with overlay.
+
+After the above changes this file passed valiadation. Please see metrics below:
+
+![jshintcheck](assets/images/jshintcheckhighscores.png)
+
+#### howtoplay.js
+
+#### playnow.js
+
+#### questionlist.js
+
+#### quizfunctions.js
+
+#### redirect.js
+
+
