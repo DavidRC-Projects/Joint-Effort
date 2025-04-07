@@ -42,7 +42,18 @@ For the 404 error page (mobile), the performance score was initially lower due t
 
 ### Results_W3C_HTML_and_CSS_validator
 
+There were 3 errors identified, which were corrected as follows:
+
+1. Replaced inner main element with section element as only 1 main tag should be used per page.
+2. Removed a stray div tag.
+
+After the above changes the validation passed. Please see homepage validation errors below:
+
+![wc3checkindex](assets/images/htmlvalidationhomepage.png)
+
 ##### Homepage_Validator - W3C Validation Check
+
+
 
 ##### 404 page - W3C Validation Check
 
