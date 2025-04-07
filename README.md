@@ -158,3 +158,31 @@ In the future, I plan to add more quiz questions to increase variety and keep th
 
 4. Practice Mode for Incorrect Answers
 I’d like to implement a “Practice Mode” that stores questions users get wrong and allows them to revisit and practice those specific questions. This feature would help reinforce learning by focusing on areas that need improvement.
+
+[Back to Contents](#contents)
+
+## Testing
+
+### Manual Testing
+
+See [TESTING.md](TESTING.md) for more details of manual testing.
+
+### Automated Testing
+
+- lighthouse in Google Chrome DevTools to analyse my website's performance, accessibility, best practices and SEO.
+
+- [pythontutor](https://pythontutor.com/javascript.html#mode=edit) to visually debug JavaScript code.
+
+See [TESTING.md](TESTING.md) for more details of lighthouse testing and fixes.
+
+### Validator Testing
+
+- [W3C](https://validator.w3.org/#validate_by_input) to validate the HTML code on every page of the website.
+
+- [W3C](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my CSS code on every page of the website.
+
+- [jshint](https://jshint.com/) to validate my javascript.
+
+See [TESTING.md](TESTING.md) for more details of validator testing and fixes.
+
+[Back to Contents](#contents)
