@@ -102,11 +102,6 @@ main {
   background-color: var(--bg-opacity);
 }
 
-.btn-404:hover {
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
-}
-
 /* modal styles edited from https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html */
 .modal {
   position: fixed;
@@ -117,7 +112,6 @@ main {
   border: 2px solid green;
   border-radius: 10px;
   z-index: 50;
-  width: 500px;
   width: 90vw;
   height: 80vh;
   background-color: rgba(88, 101, 61, 1);
@@ -251,7 +245,7 @@ input {
 }
 
 #answerbuttons .btn {
-  width: 70vw;
+  width: 70vh;
   color: var(--clr-primary);
   background-color: var(--clr-secondary);
 }
@@ -265,6 +259,17 @@ input {
   border-radius: 5px;
   font-weight: bold;
   box-shadow: 4px 4px 0px var(--clr-primary);
+}
+
+.btn-404 {
+  margin-top: 20px;
+  padding: 1rem;
+  line-height: 0.3;
+}
+
+.btn-404:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 #nextbutton {
@@ -342,7 +347,6 @@ input {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 70%;
   align-items: center;
 }
 
@@ -501,6 +505,12 @@ footer {
 
   #questioncontainer {
     font-size: 16px;
+  }
+  
+  .p404 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 1.2rem;
   }
 }
 
