@@ -481,13 +481,12 @@ footer {
     font-size: 1rem;
     padding: 0 10px;
   }
-  #highScoresModal, #howToPlayModal, #modal {
-    height: 70vh;
+  #highScoresModal, #howToPlayModal, .modal {
+    height: 90vh;
   }
   .btn {
     font-size: 1rem;
   }
-
   .button-container {
     padding: 5px 15px;
   }
