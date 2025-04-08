@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Google fonts import */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -5,7 +12,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* CSS variables for font */
@@ -27,8 +35,13 @@ html,
 body {
   height: 100%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: url("../images/pexel.png") no-repeat center center/cover;
 }
 
@@ -50,11 +63,22 @@ a {
 
 /* Homepage styles */
 main {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px;
 }
 
@@ -88,12 +112,23 @@ main {
   font-weight: 500;
   font-size: 36px;
   color: var(--clr-secondary);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
-  transform: translateY(-10%);
+  -webkit-transform: translateY(-10%);
+      -ms-transform: translateY(-10%);
+          transform: translateY(-10%);
   padding: 10px;
   border-radius: 5px;
 }
@@ -107,7 +142,11 @@ main {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 200ms ease-in-out;
+  -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   border: 2px solid green;
   border-radius: 10px;
@@ -122,7 +161,9 @@ main {
 }
 
 .modal.active {
-  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 
 #quiz-intro {
@@ -136,8 +177,12 @@ main {
 section {
   margin-top: 80px;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* Form styles */
@@ -149,13 +194,18 @@ section {
   padding: 20px;
   background: var(--clr-secondary);
   border-radius: 10px;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin-bottom: 30px;
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 input {
@@ -185,7 +235,10 @@ input {
   width: 80%;
 }
 
-#answerone, #answertwo, #answerthree, #answerfour {
+#answerone,
+#answertwo,
+#answerthree,
+#answerfour {
   position: relative;
   background-color: var(--clr-secondary);
   padding: 20px;
@@ -204,7 +257,8 @@ input {
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
   border: 3px solid var(--clr-secondary);
-  box-shadow: 1px 1px 2px;
+  -webkit-box-shadow: 1px 1px 2px;
+          box-shadow: 1px 1px 2px;
   border-radius: 5px;
 }
 
@@ -219,7 +273,8 @@ input {
   background: var(--clr-primary);
   padding: 10px 20px;
   border: 3px solid var(--clr-secondary);
-  box-shadow: 1px 1px 2px;
+  -webkit-box-shadow: 1px 1px 2px;
+          box-shadow: 1px 1px 2px;
   border-radius: 5px;
 }
 
@@ -229,19 +284,33 @@ input {
   top: 30px;
   bottom: 100px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
 #answerbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 220px;
 }
 
@@ -265,7 +334,9 @@ input {
   position: absolute;
   top: 80%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: 20px auto 0;
 }
 
@@ -282,7 +353,8 @@ input {
   font-size: 1.5rem;
   border-radius: 5px;
   font-weight: bold;
-  box-shadow: 4px 4px 0px var(--clr-primary);
+  -webkit-box-shadow: 4px 4px 0px var(--clr-primary);
+          box-shadow: 4px 4px 0px var(--clr-primary);
 }
 
 .btn-404 {
@@ -308,10 +380,12 @@ input {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-#highscorebtn:hover{
+#highscorebtn:hover {
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
@@ -320,7 +394,9 @@ input {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 30%;
   color: var(--clr-secondary);
   font-family: var(--secondary-font);
@@ -328,7 +404,8 @@ input {
   padding: 4px 20px;
   background-color: var(--clr-primary);
   border-radius: 5px;
-  box-shadow: 2px 2px 0px var(--clr-primary);
+  -webkit-box-shadow: 2px 2px 0px var(--clr-primary);
+          box-shadow: 2px 2px 0px var(--clr-primary);
 }
 
 .close-button:hover {
@@ -355,12 +432,16 @@ input {
 .correct {
   background-color: green !important;
   font-size: 20px !important;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
   transition: 300ms;
 }
 
 .incorrect {
   background-color: rgb(179, 19, 19) !important;
   opacity: 0.9;
+  -webkit-transition: 100ms;
+  -o-transition: 100ms;
   transition: 100ms;
 }
 
@@ -383,9 +464,16 @@ input {
   font-family: var(--secondary-font);
   color: var(--clr-secondary);
   list-style-position: inside; /* solution to move list numbers inside modal found from W3schools */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Gold - 1st Place with code used from https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child */
@@ -397,7 +485,8 @@ input {
   border-radius: 5px;
   width: 20vw;
   margin: auto;
-  box-shadow: 2px 2px 0px var(--clr-primary);
+  -webkit-box-shadow: 2px 2px 0px var(--clr-primary);
+          box-shadow: 2px 2px 0px var(--clr-primary);
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -410,7 +499,8 @@ input {
   border-radius: 5px;
   width: 20vw;
   margin: auto;
-  box-shadow: 2px 2px 0px var(--clr-primary);
+  -webkit-box-shadow: 2px 2px 0px var(--clr-primary);
+          box-shadow: 2px 2px 0px var(--clr-primary);
   margin-bottom: 5px;
 }
 
@@ -422,7 +512,8 @@ input {
   border-radius: 5px;
   width: 20vw;
   margin: auto;
-  box-shadow: 2px 2px 0px var(--clr-primary);
+  -webkit-box-shadow: 2px 2px 0px var(--clr-primary);
+          box-shadow: 2px 2px 0px var(--clr-primary);
   margin-bottom: 5px;
 }
 
@@ -474,14 +565,15 @@ footer {
     font-size: 1.2rem;
     padding: 0 10px;
     margin-bottom: 10px;
-    
   }
 
   #paragraph {
     font-size: 1rem;
     padding: 0 10px;
   }
-  #highScoresModal, #howToPlayModal, .modal {
+  #highScoresModal,
+  #howToPlayModal,
+  .modal {
     height: 90vh;
   }
   .btn {
@@ -491,10 +583,17 @@ footer {
     padding: 5px 15px;
   }
   #answerbuttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 120px;
   }
   #answerbuttons .btn {
@@ -517,7 +616,7 @@ footer {
   #questioncontainer {
     font-size: 16px;
   }
-  
+
   .p404 {
     font-family: var(--primary-font);
     font-weight: 500;
@@ -535,7 +634,6 @@ footer {
     font-size: 2.5rem;
     padding: 0 10px;
     margin-bottom: 10px;
-    
   }
 
   #paragraph {
@@ -550,7 +648,9 @@ footer {
     padding: 5px 15px;
     margin-top: 70px;
   }
-  #howToPlayh2, #finalscore, #btnhowtoplay {
+  #howToPlayh2,
+  #finalscore,
+  #btnhowtoplay {
     font-size: 1.5rem;
   }
   #questioncontainer {
@@ -568,10 +668,15 @@ footer {
   #nextbutton {
     margin-top: 30px;
   }
-  #nextbutton, #highscorebtn, #score, #timer, #questioncontainer {
+  #nextbutton,
+  #highscorebtn,
+  #score,
+  #timer,
+  #questioncontainer {
     font-size: 32px;
   }
-  #usernameForm button, #username {
+  #usernameForm button,
+  #username {
     font-size: 1.25rem;
   }
   #usernameForm {
@@ -614,7 +719,11 @@ footer {
   #homepageh2 {
     font-size: 3.5rem;
   }
-  #paragraph, #howToPlayh2, #finalscore, #btnhowtoplay, .btn {
+  #paragraph,
+  #howToPlayh2,
+  #finalscore,
+  #btnhowtoplay,
+  .btn {
     font-size: 2.5rem;
   }
   #answerbuttons {
@@ -622,13 +731,20 @@ footer {
     font-size: 32px;
     gap: 40px;
   }
-  #questioncontainer, .close-button {
+  #questioncontainer,
+  .close-button {
     font-size: 32px;
   }
-  #nextbutton, #highscorebtn, #score, #timer, #questioncontainer, label {
+  #nextbutton,
+  #highscorebtn,
+  #score,
+  #timer,
+  #questioncontainer,
+  label {
     font-size: 40px;
   }
-  #usernameForm button, #username {
+  #usernameForm button,
+  #username {
     font-size: 2.5rem;
   }
   #usernameForm {
