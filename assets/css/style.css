@@ -607,22 +607,25 @@ footer {
   h1 {
     font-size: 4rem;
   }
-
   #homepageh2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
-
   #paragraph, #howToPlayh2, #finalscore, #btnhowtoplay, .btn {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  #answerbuttons {
+    margin-top: 300px;
+    font-size: 32px;
+    gap: 40px;
   }
   #questioncontainer, .close-button {
-    font-size: 24px;
+    font-size: 32px;
   }
-  #nextbutton,  #highscorebtn, #score, #timer, #questioncontainer {
-    font-size: 36px;
+  #nextbutton,  #highscorebtn, #score, #timer, #questioncontainer, label {
+    font-size: 40px;
   }
   #usernameForm button, #username {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   #usernameForm {
     font-size: 1.5rem;
