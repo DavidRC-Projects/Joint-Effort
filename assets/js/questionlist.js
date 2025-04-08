@@ -178,5 +178,50 @@ export const questions = [
             { text: "Humerus", correct: false },
             { text: "Scapula", correct: false }
         ]
+    },
+    {
+        question: "What is the name of the bone that forms the back portion of the roof of the mouth?",
+        answers: [
+            { text: "Palatine bone", correct: true },
+            { text: "Maxilla", correct: false },
+            { text: "Zygomatic bone", correct: false },
+            { text: "Mandible", correct: false }
+        ]
+    },
+    {
+        question: "Which bone is part of the thoracic cage and helps protect the heart and lungs?",
+        answers: [
+            { text: "Sternum", correct: true },
+            { text: "Ribs", correct: false },
+            { text: "Clavicle", correct: false },
+            { text: "Scapula", correct: false }
+        ]
+    },
+    {
+        question: "Which bone connects the upper limb to the axial skeleton at the sternoclavicular joint?",
+        answers: [
+            { text: "Clavicle", correct: true },
+            { text: "Scapula", correct: false },
+            { text: "Humerus", correct: false },
+            { text: "Radius", correct: false }
+        ]
+    },
+    {
+        question: "What is the name of the bone that forms the sides and roof of the cranium?",
+        answers: [
+            { text: "Parietal bones", correct: true },
+            { text: "Occipital bone", correct: false },
+            { text: "Frontal bone", correct: false },
+            { text: "Temporal bone", correct: false }
+        ]
+    },
+    {
+        question: "Which bone is located in the inner ear and is the smallest bone in the human body?",
+        answers: [
+            { text: "Stapes", correct: true },
+            { text: "Malleus", correct: false },
+            { text: "Incus", correct: false },
+            { text: "Cochlea", correct: false }
+        ]
     }
 ];

@@ -29,10 +29,10 @@ const getRandomObject = (arr) => {
     if (selectedQuestions.includes(randomIndex)) {
         return getRandomObject(arr);
       }
+      selectedQuestions.push(randomIndex);
       if (selectedQuestions.length >= 14) {
         selectedQuestions = [];
       }
-      selectedQuestions.push(randomIndex);
   return arr[randomIndex];
 };
 
@@ -196,7 +196,7 @@ function showScore() {
         } else {
             saveHighScore(userInput, score);
             Swal.fire({
-                title: "Congragulations",
+                title: "congratulations",
                 text: (`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`),
                 icon: "success"
             });

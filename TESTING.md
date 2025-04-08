@@ -137,8 +137,33 @@ This file passed validation. Please see metrics below:
 | Hover effects of homepage button | Hover in and out of homepage button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
 
 `Play Now Modal testing`
+| Feature | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- |
+| Close button functionality | Click close button | Play now modal closes | Pass |
+| Hover effects of close button | Hover in and out of close button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
+| Score tracking | Play through the quiz within the modal | Score updates by 1 correctly based on correct answers | Pass |
+| Timer functionality | Observed the countdown timer on modal open | Timer starts when the Play Now modal opens and stops the quiz after 60 seconds or when 15 questions have been answered| Pass |
+| Question randomisation and progression | Observed question order and numbering | Questions are shown in a random order and progress sequentially (e.g. Question 1, Question 2...)| Pass |
+| Correct Answer Feedback | Clicked on a correct answer and observed the button behavior | The correct answer button turns green and the text enlarges. The score increases by 1 | Pass |
+| Incorrect Answer Feedback | Clicked on an incorrect answer and observed the button behavior | The incorrect answer button turns red. The correct answer button turns green | Pass |
+| Answer button behaviour | Clicked on various answers both correct and incorrect | The incorrect answer button turns red. The correct answer button turns green with a transition. The other buttons are disabled when clicked | Pass |
+| Answer display | Clicked on an incorrect answer | This correctly displayed the correct answer after the user selects an incorrect one | Pass |
+| Timer and Scorereset | Click Play again button | Both timer and score resets to 60 seconds and 0 respectively and a new quiz begins | Pass |
+| Score display when game ends | Observe the score display at the end of the quiz | The score displays the correct score out of 15 | Pass |
+| Empty user input on form | Left the input field blank and clicked submit on the form | An alert appears informing an error and gives a message stating 'Please enter your username before ending the quiz!' | Pass |
+| Valid user input on form | Entered username and clicked submit button | An alert appears congratulating the user and directs them to play again or to view highscores  | Pass |
+| Highcores and play again button visibility | Observe when form has been completed | The highscores and play again buttons appears and the form is hidden | Pass |
+| Play again button | Click on the play again button | The quiz starts again with the score, timer and questions being reset | Pass |
+| Highscores button | Click on the highscores button | The highscores modal appears | Pass |
+| Hover effect on high scores button | Hover in and out of highscores button | Button background changes to white and text to black on hover and reverts on mouse out| Pass |
+| Hover effect on play again button | Hover in and out of play again button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
 
 `How to Play Modal Testing`
+| Feature | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- |
+| Close button functionality | Click close button | How to play modal closes | Pass |
+| Hover effects of close button | Hover in and out of close button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
+| Instruction clarity | Read the content inside the modal | Text is easy to read and well structured | Pass |
 
 `Highscores Modal Testing`
 | Feature | Testing Performed | Result | Pass/Fail |
@@ -147,6 +172,7 @@ This file passed validation. Please see metrics below:
 | Hover effects of close button | Hover in and out of close button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
 | Close button functionality | Click close button | Highscores modal closes | Pass |
 | Top 3 scores styling | Visually check top scores | Gold, silver and bronze styles applied to top 3 positions respectively | Pass |
+| Top 10 scores appear in the modal | Visually check top scores | All top 10 score appear in the highscores modal with mobile, tablet, desktop and larger screens | Pass |
 
 
 [Back to Top](#contents)
