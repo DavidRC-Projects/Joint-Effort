@@ -89,10 +89,19 @@ After the above changes this file passed valiadation. Please see metrics below:
 
 #### playnow.js
 
+JSHint validation found 1 error in the highscores.js file. These were resolved as follows:
+
+1. Undefined variables: Four variables — timer, score, currentQuestionIndex, and the startQuiz function were flagged as undefined. This was resolved by exporting them from the quizfunctions.js file and importing them into playnow.js using ES6 module syntax.
+
+![jshintcheck](assets/images/jshintcheckplaynow.png)
+
 #### questionlist.js
 
 #### quizfunctions.js
 
+![jshintcheck](assets/images/jshintcheckquizfunctions.png)
+
 #### redirect.js
 
+![jshintcheck](assets/images/jshintcheckredirect.png)
 

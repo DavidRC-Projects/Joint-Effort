@@ -1,3 +1,4 @@
+import { openHighScoresModal } from './highscores.js';
 import { questions } from "./questionlist.js";
 
 const questionElement = document.getElementById("questioncontainer");
