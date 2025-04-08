@@ -75,15 +75,17 @@ No errors were found with the css code on validation checks.
 
 JSHint validation found 2 errors in the highscores.js file. These were resolved as follows:
 
-1. Removed an unnecessary semicolon to improve code clarity and follow JavaScript best practices.
+1. Unnecessary Semicolon: Removed an unnecessary semicolon to improve code clarity and follow JavaScript best practices.
 
-2. Fixed an undefined variable error by declaring overlay properly by replacing the variable overlayHighScores with overlay.
+2. Undefined Variable (overlay): Initially resolved by correctly declaring the overlay variable in place of overlayHighScores. However, after testing, I found that the overlay had no functional impact on the high scores modal. As a result, I removed the variable and its associated code to keep the script clean and efficient.
 
 After the above changes this file passed valiadation. Please see metrics below:
 
 ![jshintcheck](assets/images/jshintcheckhighscores.png)
 
 #### howtoplay.js
+
+![jshintcheck](assets/images/jshintcheckhowtoplay.png)
 
 #### playnow.js
 

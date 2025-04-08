@@ -1,3 +1,4 @@
+import { currentQuestionIndex, score, timer, startQuiz } from './quizfunctions.js';
 const playNowButton = document.getElementById("playnow");
 const playNowModal = document.getElementById("modal");
 const closePlayNowButton = playNowModal.querySelector("[data-close-button]");

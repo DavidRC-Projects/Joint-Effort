@@ -8,11 +8,11 @@ const form = document.getElementById("usernameForm");
 const highScoreButton = document.getElementById("highscorebtn");
 
 
-let currentQuestionIndex = 0;
+export let currentQuestionIndex = 0;
 let selectedQuestions = [];
-let score = 0;
+export let score = 0;
 let sec = 60;
-let timer;
+export let timer;
 
 const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array.
 
@@ -52,7 +52,7 @@ function clearQuestions(){
  * The form and highscores button are hidden at the start of the quiz .
  * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8.
 */
-function startQuiz(){
+export function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     sec = 60;
