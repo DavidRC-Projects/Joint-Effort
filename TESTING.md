@@ -121,14 +121,32 @@ This file passed validation. Please see metrics below:
 
 ### Manual-testing
 
-Home page testing
+`Home page testing`
 | Feature | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- |
+| Title of the site | Click button | The homepage will refresh | Pass |
+| Play Now Button | Click button | Opens play now modal | Pass |
+| How to Play Button | Click button | Opens how to play modal | Pass |
+| Highscores Button | Click button | Opens highscores modal | Pass |
+| Hover effects of all buttons | Hover in and out of each button | Button background changes to black on hover and reverts on mouse out | Pass |
 
-
-404 page testing
+`404 page testing`
 | Feature | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- |
 | Return home button | Click button | redirects user to home page | Pass |
+| Hover effects of homepage button | Hover in and out of homepage button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
+
+`Play Now Modal testing`
+
+`How to Play Modal Testing`
+
+`Highscores Modal Testing`
+| Feature | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- |
+| High scores display | Open highscores modal | Saved scores are displayed in order | Pass |
+| Hover effects of close button | Hover in and out of close button | Button background changes to white and text to black on hover and reverts on mouse out | Pass |
+| Close button functionality | Click close button | Highscores modal closes | Pass |
+| Top 3 scores styling | Visually check top scores | Gold, silver and bronze styles applied to top 3 positions respectively | Pass |
+
 
 [Back to Top](#contents)
