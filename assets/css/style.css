@@ -150,21 +150,33 @@ main {
   opacity: 1;
 }
 
+section {
+  margin-top: 80px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Form styles */
 #usernameForm {
   display: none;
   font-family: var(--secondary-font);
   margin-top: 80px;
-  width: 300px;
+  width: 80vw;
   padding: 20px;
   background: var(--clr-secondary);
   border-radius: 10px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
   margin-bottom: 30px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 input {
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -180,25 +192,24 @@ input {
 
 /* styling hidden quiz elements */
 #questioncontainer {
-  position: relative;
+  position: absolute;
   padding: 10px;
   background-color: var(--clr-secondary);
   font-family: var(--primary-font);
   font-size: 24px;
   border-radius: 5px;
   border: 1px solid var(--clr-primary);
-  margin-top: 60px;
   margin-bottom: 30px;
-  width: 100%;
+  width: 80%;
 }
 
 #answerone, #answertwo, #answerthree, #answerfour {
+  position: relative;
   background-color: var(--clr-secondary);
   padding: 20px;
   font-size: 16px;
   border: 1px solid var(--clr-primary);
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 #score {
@@ -244,10 +255,41 @@ input {
   width: 100%;
 }
 
+#answerbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 220px;
+}
+
 #answerbuttons .btn {
-  width: 70vh;
+  width: 90vh;
+  max-width: 500px;
   color: var(--clr-primary);
   background-color: var(--clr-secondary);
+}
+
+#nextbutton {
+  display: none;
+  width: 50%;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  margin-top: 25px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 20px auto 0;
+}
+
+#nextbutton:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
 }
 
 .btn {
@@ -272,34 +314,19 @@ input {
   color: var(--clr-primary);
 }
 
-#nextbutton {
-  display: none;
-  width: 50%;
-  font-family: var(--secondary-font);
-  font-size: 16px;
-  margin-top: 25px;
-  padding: 5px 25px;
-  border-radius: 5px;
-  background-color: var(--clr-primary);
-  color: var(--clr-secondary);
-}
-
-#nextbutton:hover {
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
-}
-
 #highscorebtn {
   display: none;
-  margin-top: 50px;
   width: 50%;
   font-family: var(--secondary-font);
   font-size: 16px;
-  margin-top: 25px;
   padding: 5px 25px;
   border-radius: 5px;
   background-color: var(--clr-primary);
   color: var(--clr-secondary);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #highscorebtn:hover{
@@ -340,14 +367,6 @@ input {
   font-size: 0.5rem;
   border-radius: 5px;
   font-weight: bold;
-}
-
-/* styles for answer buttons */
-#answerbuttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
 }
 
 /* Styles for answer buttons when correct and incorrect */
@@ -488,7 +507,16 @@ footer {
   .button-container {
     padding: 5px 15px;
   }
-
+  #answerbuttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 120px;
+  }
+  #answerbuttons .btn {
+    width: 100%;
+  }
   #btnhowtoplay {
     padding: 5px 15px;
     font-size: 1rem;
@@ -551,10 +579,9 @@ footer {
   .close-button {
     font-size: 20px;
   }
-  #nextbutton,  #highscorebtn, #score, #timer, #questioncontainer {
+  #nextbutton, #highscorebtn, #score, #timer, #questioncontainer {
     font-size: 32px;
   }
-
   #usernameForm button, #username {
     font-size: 1.25rem;
   }
@@ -571,6 +598,8 @@ footer {
   #highScoresModal li, #howToPlayModal ul {
     font-size: 0.75rem;
   }
+
+
 }
 
 /* Styles for screens extra large */

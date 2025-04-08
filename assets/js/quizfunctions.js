@@ -10,10 +10,11 @@ const highScoreButton = document.getElementById("highscorebtn");
 
 
 export let currentQuestionIndex = 0;
-let selectedQuestions = [];
 export let score = 0;
-let sec = 60;
 export let timer;
+let sec = 60;
+let selectedQuestions = [];
+
 
 const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length); // This will generate a random index between 0 and length of the array.
 

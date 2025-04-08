@@ -19,6 +19,7 @@ function openPlayNowModal() {
   if (typeof startQuiz === 'function') {
     // Force reset of all quiz state
     currentQuestionIndex = 0;
+    console.log("After startQuiz:", currentQuestionIndex);
     score = 0;
     
     // Clear any existing timer
