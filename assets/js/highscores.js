@@ -1,7 +1,7 @@
 //Event listener triggers function when highscores button is clicked, making the high scores container appear in the centre of the screen.
 
 const highScoresButton = document.getElementById("highscores");
-export const highScoresModal = document.getElementById("highScoresModal");
+const highScoresModal = document.getElementById("highScoresModal");
 const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
 const highScoresList = document.getElementById('highscorelist');
 
@@ -11,7 +11,7 @@ closeHighScoresButton.addEventListener("click", closeHighScoresModal);
 /**
  * This function opens highscores modal when event listener is triggered by click.
  */
-function openHighScoresModal() {
+export function openHighScoresModal() {
   highScoresModal.classList.add("active");
   displayHighScores();
 }

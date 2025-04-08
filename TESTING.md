@@ -7,7 +7,7 @@
 ### Automated testing
 * [Lighthouse](#results-from-lighthouse-testing)
 * [W3C HTML and CSS Validator](#results_w3c_html_and_css_validator)
-* [Jshint validator testing](#jshint_validator_testing)
+* [Jshint validator testing](#jshint_validation_check)
 * [Manual Testing](#manual-testing)
 
 ### Results from Lighthouse testing
@@ -69,11 +69,11 @@ No errors were found with the css code on validation checks.
 
 [Back to Top](#contents)
 
-#### Jshint validaton check
+#### Jshint_validation_check
 
 #### highscores.js
 
-JSHint validation found 2 errors in the highscores.js file. These were resolved as follows:
+Jshint validation found 2 errors in the highscores.js file. These were resolved as follows:
 
 1. Unnecessary Semicolon: Removed an unnecessary semicolon to improve code clarity and follow JavaScript best practices.
 
@@ -85,23 +85,50 @@ After the above changes this file passed valiadation. Please see metrics below:
 
 #### howtoplay.js
 
+This file passed validation. Please see metrics below:
+
 ![jshintcheck](assets/images/jshintcheckhowtoplay.png)
 
 #### playnow.js
 
-JSHint validation found 1 error in the highscores.js file. These were resolved as follows:
+Jshint validation found 1 error in the highscores.js file. These were resolved as follows:
 
 1. Undefined variables: Four variables — timer, score, currentQuestionIndex, and the startQuiz function were flagged as undefined. This was resolved by exporting them from the quizfunctions.js file and importing them into playnow.js using ES6 module syntax.
+
+After the above changes the file passed validation. Please see metrics below:
 
 ![jshintcheck](assets/images/jshintcheckplaynow.png)
 
 #### questionlist.js
 
+This file passed validation.
+
 #### quizfunctions.js
+
+Jshint validation found 1 error in the highscores.js file. These were resolved as follows:
+
+1. Undefined variables: two variables — swal and openHighScoresModal were flagged as undefined. This was resolved by exporting openHighScoresModal from the highscores.js file and importing them into quizfunction.js using ES6 module syntax. The swal variable was not modified because it is correctly sourced from the SweetAlert2 CDN, and its functionality works as expected in the browser.
+
+After the above changes the file passed validation. Please see metrics below:
 
 ![jshintcheck](assets/images/jshintcheckquizfunctions.png)
 
 #### redirect.js
 
+This file passed validation. Please see metrics below:
+
 ![jshintcheck](assets/images/jshintcheckredirect.png)
 
+### Manual-testing
+
+Home page testing
+| Feature | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- |
+
+
+404 page testing
+| Feature | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- |
+| Return home button | Click button | redirects user to home page | Pass |
+
+[Back to Top](#contents)
