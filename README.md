@@ -169,9 +169,9 @@ See [TESTING.md](TESTING.md) for more details of manual testing.
 
 ### Automated Testing
 
-- lighthouse in Google Chrome DevTools to analyse my website's performance, accessibility, best practices and SEO.
+- Lighthouse in Google Chrome DevTools to analyse my website's performance, accessibility, best practices and SEO.
 
-- [pythontutor](https://pythontutor.com/javascript.html#mode=edit) to visually debug JavaScript code.
+- [Pythontutor](https://pythontutor.com/javascript.html#mode=edit) to visually debug JavaScript code.
 
 See [TESTING.md](TESTING.md) for more details of lighthouse testing and fixes.
 
@@ -186,3 +186,21 @@ See [TESTING.md](TESTING.md) for more details of lighthouse testing and fixes.
 See [TESTING.md](TESTING.md) for more details of validator testing and fixes.
 
 [Back to Contents](#contents)
+
+### Known Bugs
+When play now is clicked the console using dev tools in Google Chrome reports 'Uncaught TypeError: Assignment to constant variable at HTMLButtonElement.openPlayNowModal (playnow.js:21:26)'. I investigated this bug and tried to see if i had used a const rather than a let variable for currentQuestionIndex. However, i could only identify a let variable and could not identify why this bug was occuring. Despite this the functionality of the quiz is not affected.
+
+### Fixed Bugs
+1. Hover effect on "How to Play" button: Noticed the hover effect was not working. Used console.log() to check if the mouseover event was being detected. An error appeared showing that the variable overlay had been declared twice. Renamed the variable in howtoplay.js to overlayHowToPlay. After the change the hover worked on "How to play" button.
+
+2. Second modal implementation : Attempted to add a second modal. Encountered a bug with the second modal not displaying, and received the error: Uncaught SyntaxError: Function statements require a function name in javascript.js:41. I decided to change path and keep all content within a single modal rather than opening a modal in a modal. Used display: none to hide elements and reveal quiz elements upon clicking the start button with the username input at the end of the quiz. This resulted in a smooth transition and fixed this issue.
+
+3. Question number increment: Observed that the question number increased by 2 each time the "Next" button was clicked. Investigated the issue and found that currentQuestionIndex was being incremented in both the showQuestion() function and handleNextButton(). Therefore, removed the increment from showQuestion() and retained it only in handleNextButton(). The question number now increases by 1 as expected.
+
+4. Question 13/14 answers not displaying: During quiz testing, observed that at question 13 or 14, answer options stopped appearing. Used browser console to inspect and found the error: Uncaught RangeError: Maximum call stack size exceeded. Bug was caused by recursive calls in getRandomObject when all questions had been selected. Added condition to reset selectedQuestions and score once it reached 14:
+if (selectedQuestions.length >= 14) { selectedQuestions = []; score = 0; }
+This resolved the issue and the quiz now runs smoothly through all 15 questions.
+
+5. Redirect issues with github: Attempted to implement a 301 redirect, but GitHub Pages does not support server-side redirects. Instead, created a custom 404 error page with JavaScript that automatically redirects the user back to the homepage after 3 seconds. When an invalid URL is visited, the 404 page displays briefly and then redirects to the homepage.
+
+### Deployment and Local Deployment

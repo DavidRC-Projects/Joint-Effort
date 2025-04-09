@@ -129,6 +129,7 @@ This file passed validation. Please see metrics below:
 | How to Play Button | Click button | Opens how to play modal | Pass |
 | Highscores Button | Click button | Opens highscores modal | Pass |
 | Hover effects of all buttons | Hover in and out of each button | Button background changes to black on hover and reverts on mouse out | Pass |
+| Responsivity to mobile, tablet, desktop and larger screens | Played quiz on mobile device, tablet and desktop and used dev tools on Google Chrome to test quiz on larger screens | The home page and all modals are responsive to all devices | Pass |
 
 `404 page testing`
 | Feature | Testing Performed | Result | Pass/Fail |
@@ -173,6 +174,8 @@ This file passed validation. Please see metrics below:
 | Close button functionality | Click close button | Highscores modal closes | Pass |
 | Top 3 scores styling | Visually check top scores | Gold, silver and bronze styles applied to top 3 positions respectively | Pass |
 | Top 10 scores appear in the modal | Visually check top scores | All top 10 score appear in the highscores modal with mobile, tablet, desktop and larger screens | Pass |
+| Highscore saved to local storage | Played game and submitted score | Highscore appears in highscore modal | Pass |
+| Highscore persists after refresh | Refreshed browser | Highscores are still visible after page reload | Pass |
 
 
 [Back to Top](#contents)
