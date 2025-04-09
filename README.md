@@ -81,6 +81,15 @@ The Merriweather font was used as the primary font, with Poppins as the secondar
 
 I created wireframes for mobile, tablet and desktop using figma.
 
+#### Home page
+![wireframe home page](/assets/images/wireframehomepage.png)
+
+#### Quiz page
+![wireframe quiz page](/assets/images/wireframequizpage.png)
+
+#### How to play page
+![wireframe how to play page](/assets/images/wireframehowtoplaypage.png)
+
 ### Existing Features
 
 The website has been designed with a homepage and a custom 404 error page. No additional pages were created instead, modals are used throughout to create a more streamlined and user-friendly experience.
@@ -269,7 +278,7 @@ JavaScript, HTML and CSS
 ## Credits
 
 ### Media 
-The background image for the homepage was taken from [Pexels](https://www.pexels.com/).
+The background image for the homepage was taken from [Pexels](https://www.pexels.com/photo/selective-focus-photography-of-skeleton-1528375/).
 
 ### Features
 
