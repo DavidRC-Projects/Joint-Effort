@@ -29,6 +29,7 @@
   --btn-opacity: rgba(88, 101, 61, 0.7);
   --clr-secondary: #ffffff;
   --btn-colour: #58653d;
+  --btn-answercolour: #1EA200;
 }
 
 html,
@@ -148,7 +149,7 @@ main {
   -webkit-transition: 200ms ease-in-out;
   -o-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
-  border: 2px solid green;
+  border: 2px solid var(--btn-answercolour);
   border-radius: 10px;
   z-index: 50;
   width: 90vw;
@@ -430,7 +431,7 @@ input {
 
 /* Styles for answer buttons when correct and incorrect */
 .correct {
-  background-color: green !important;
+  background-color: var(--btn-answercolour) !important;
   font-size: 20px !important;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
