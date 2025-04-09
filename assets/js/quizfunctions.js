@@ -49,10 +49,9 @@ function clearQuestions(){
 
 /**
  * This function starts by reseting the score, index and timer when the quiz starts.
- * After reseting the functions of clearQuestions, show question and startTimer are called .
+ * After reseting the functions of clearQuestions, show question and startTimer are called.
  * A next button appears after clicking on an answer button.
- * The form and highscores button are hidden at the start of the quiz .
- * Edited code from https://www.youtube.com/watch?v=PBcqGxrr9g8.
+ * The form and highscores button are hidden at the start of the quiz.
 */
 export function startQuiz(){
     currentQuestionIndex = 0;

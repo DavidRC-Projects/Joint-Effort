@@ -11,7 +11,6 @@ Add image of reseponsive mock up.
 Link to [responsive Mockup] https://ui.dev/amiresponsive?url=https://davidrc-projects.github.io/Joint-Effort/
 
 ## CONTENTS
-* [User Experience](#user-experience)
 * [User Stories](#user-stories)
 
 ## Design
@@ -43,27 +42,25 @@ Link to [responsive Mockup] https://ui.dev/amiresponsive?url=https://davidrc-pro
 * [Credits](#credits)
 * [Acknowledgments](#acknowledgments)
 
-### User Experience (UX)
+## User Stories
 
-#### User Stories
-
-##### First Time Visitor Goals
+### First Time Visitor Goals
 • I am a physiotherapy student looking for an engaging way to test and improve my anatomy knowledge.
 • I want the quiz to challange my anatomy knowledge
 • The site should be user-friendly, well-structured, and fully responsive across different devices.
 • I want to see how many questions i answered correctly and view my total score at the end.
 • Before starting the quiz, I would like clear instructions on how to play.
 
-##### Returning Visitor Goals
+### Returning Visitor Goals
 • I want to replay the quiz to see if i can improve my score.
 • I would like to track my best score and aim to beat my previous results.
 • I would like the quiz to be easy to navigate so i can check the highscores.
 
-##### Frequant Visitor Goals
+### Frequant Visitor Goals
 • I would like to earn trophies for achieving a top 3 score.
 • I want to practice a variety of questions to improve my anatomy knowledge.
 
-##### Owner Goals
+### Owner Goals
 • I want to create an interactive quiz that helps physiotherapy students and any anatomy enthusiasts that can improve or refresh their anatomy knowledge.
 • I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
 • I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
@@ -183,6 +180,8 @@ See [TESTING.md](TESTING.md) for more details of lighthouse testing and fixes.
 
 - [jshint](https://jshint.com/) to validate my javascript.
 
+- [Autoprefixer CSS online](https://autoprefixer.github.io/). Used to make the website more accessable on different browsers.
+
 See [TESTING.md](TESTING.md) for more details of validator testing and fixes.
 
 [Back to Contents](#contents)
@@ -203,4 +202,117 @@ This resolved the issue and the quiz now runs smoothly through all 15 questions.
 
 5. Redirect issues with github: Attempted to implement a 301 redirect, but GitHub Pages does not support server-side redirects. Instead, created a custom 404 error page with JavaScript that automatically redirects the user back to the homepage after 3 seconds. When an invalid URL is visited, the 404 page displays briefly and then redirects to the homepage.
 
-### Deployment and Local Deployment
+## Deployment and Local Deployment
+
+### Deployment
+
+The site is deployed using GitHub Pages - [Joint-Effort](https://davidrc-projects.github.io/Joint-Effort/).
+
+To Deploy the site using GitHub Pages please follow steps below:
+
+1. Login (or signup) to Github.
+2. Go to the repository for this project, [DavidRC-Projects/Joint-Effort](https://davidrc-projects.github.io/Joint-Effort/).
+3. Click the settings button.
+4. Select pages in the left hand navigation menu.
+5. From the source dropdown select main branch and press save.
+6. The site has now been deployed, please note that this process may take a few minutes before the site goes live.
+
+### Local Development
+
+#### How to Fork
+
+To fork the repository:
+
+1. Log in (or sign up) to Github.
+2. Go to the repository for this project, [DavidRC-Projects/Joint-Effort](https://github.com/DavidRC-Projects/Joint-Effort).
+3. Click the Fork button in the top right corner.
+
+#### How to Clone
+
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [DavidRC-Projects/Joint-Effort](https://github.com/DavidRC-Projects/Joint-Effort).
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+[Back to Contents](#contents)
+
+## Technologies Used
+
+### Languages Used
+JavaScript, HTML and CSS
+
+### Programs and Sites Used
+* Figma for wire frames [Figma Wireframes](https://www.figma.com/design/gDVoXeRKMzkqZGKgYgXfLV/Joint-Effort-project2?node-id=0-1&t=4speEeK8rEchNVnf-1).
+* VS code - Intergrated Development Enviroment.
+* Github - Version Control.
+* Google developer tools - To test code.
+* Google fonts [Google Fonts](https://fonts.google.com/)
+* Font Awesome [Font Awesome](https://fontawesome.com/)
+* Slack - For updates and communication.
+* Am i Responsive [Am I Responsive?](http://ami.responsivedesign.is/) - To view website as mulitiple different devices.
+* Tiny PNG [TinyPNG](https://tinypng.com/) - To compress images and convert them to png.
+* Favicon.io [Favicon.io](https://favicon.io/) To create favicon.
+* Image Resizer [Image Resizer](https://imageresizer.com/) to resize images.
+* Color contrast checker [Color contrast checker](https://coolors.co/contrast-checker) - To calculate contrast ratio of text and background.
+* Pexels [Pexels](https://www.pexels.com/) - To add additional free images to the website.
+* Python Tutor [Pythontutor](https://pythontutor.com/javascript.html#mode=edit) - To help visually debug JavaScript.
+* MDN Web Docs [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting) - Support with features and understanding JavaScript.
+* Sweetalert2 [Sweetalert2](https://sweetalert2.github.io/) - To make custom alerts.
+* Youtube [Youtube](https://www.youtube.com/) - Watched video tutorials to support understanding of JavaScript.
+* W3Schools [W3Schools](https://www.w3schools.com/) - Additional aid for coding with JavaScript, html and css.
+
+[Back to Contents](#contents)
+
+## Credits
+
+### Media 
+The background image for the homepage was taken from [Pexels](https://www.pexels.com/).
+
+### Features
+
+Modal Styling:
+Inspiration and guidance for creating modal styles were taken from Web Dev Simplified’s Vanilla JavaScript Modal example
+[Vanilla-JavaScript-Modal](https://github.com/WebDevSimplified/Vanilla-JavaScript-Modal/blob/master/index.html).
+
+Ordered List Display in Modal:
+Used W3Schools to resolve an issue where numbered list items were not displaying correctly inside a modal
+[W3Schools](https://www.w3schools.com/css/css_list.asp).
+
+CSS Pseudo-classes:
+
+Referred to MDN Web Docs for the :first-child selector
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child).
+
+Also used MDN Web Docs for the :nth-child selector
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child).
+
+Quiz Question Logic:
+The quiz list structure and showQuestions() function were inspired by this YouTube tutorial: JavaScript Quiz Tutorial.
+[Youtube tutorial](https://www.youtube.com/watch?v=PBcqGxrr9g8).
+
+Random Question Selection:
+Adapted a solution for generating random indexes without repetition from this Stack Overflow thread: 
+Stack Overflow – Random Questions Without Repeating
+[Stack Overflow](https://stackoverflow.com/questions/72341389/how-do-i-generate-a-random-question-using-javascript-for-my-quiz-app-which-doesn).
+
+Start Timer Function:
+Idea for implementing a quiz timer was based on this Stack Overflow post: 
+Stack Overflow – JavaScript Timer for Quiz
+[Stack Overflow](https://stackoverflow.com/questions/44314897/javascript-timer-for-a-quiz).
+
+Saving High Scores:
+Followed the approach shown in this tutorial for saving and displaying high scores: 
+[Youtube Save High Scores](https://www.youtube.com/watch?v=rsWhJ2XviE4).
+
+Redirect to Homepage Using JavaScript:
+Used MDN Web Docs for guidance on the window.location.replace() method:
+[MDN Web Docs-Location.replace()](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace).
+### Acknowledgments
+
+* I would like thank my mentor Jubril Akolade for his advice and guidance.
+* I would like to thank my partner for all her support during this project.
+
+[Back to Contents](#contents)
