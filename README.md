@@ -41,25 +41,25 @@ Link to [Responsive mockup](https://ui.dev/amiresponsive?url=https://davidrc-pro
 ## User Stories
 
 ### First Time Visitor Goals
-• I am a physiotherapy student looking for an engaging way to test and improve my anatomy knowledge.
-• I want the quiz to challange my anatomy knowledge
-• The site should be user-friendly, well-structured, and fully responsive across different devices.
-• I want to see how many questions i answered correctly and view my total score at the end.
-• Before starting the quiz, I would like clear instructions on how to play.
+* I am a physiotherapy student looking for an engaging way to test and improve my anatomy knowledge.
+* I want the quiz to challange my anatomy knowledge.
+* The site should be user-friendly, well-structured, and fully responsive across different devices.
+* I want to see how many questions i answered correctly and view my total score at the end.
+* Before starting the quiz, I would like clear instructions on how to play.
 
 ### Returning Visitor Goals
-• I want to replay the quiz to see if i can improve my score.
-• I would like to track my best score and aim to beat my previous results.
-• I would like the quiz to be easy to navigate so i can check the highscores.
+* I want to replay the quiz to see if i can improve my score.
+* I would like to track my best score and aim to beat my previous results.
+* I would like the quiz to be easy to navigate so i can check the highscores.
 
 ### Frequant Visitor Goals
-• I would like to earn trophies for achieving a top 3 score.
-• I want to practice a variety of questions to improve my anatomy knowledge.
+* I would like to earn trophies for achieving a top 3 score.
+* I want to practice a variety of questions to improve my anatomy knowledge.
 
 ### Owner Goals
-• I want to create an interactive quiz that helps physiotherapy students and any anatomy enthusiasts that can improve or refresh their anatomy knowledge.
-• I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
-• I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
+* I want to create an interactive quiz that helps physiotherapy students and any anatomy enthusiasts that can improve or refresh their anatomy knowledge.
+* I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
+* I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
 
 ### Colour Scheme
 
@@ -109,7 +109,7 @@ A favicon appears in the browser tab for easy recognition.
 
 ![Favicon](/assets/images/faviconexample.png)
 
-The site title is displayed at the top of the page and also acts as a clickable link that navigates back to the homepage. The footer is at the bottom of the page and mainstains a consistent deisgn that is resposnive to mobile, tablet and desktop devices.
+The site title is displayed at the top of the page and also acts as a clickable link that navigates back to the homepage. The footer is at the bottom of the page and mainstains a consistent deisgn that is responsive to mobile, tablet and desktop devices.
 
 ![Page title](/assets/images/title.png)
 
@@ -189,7 +189,7 @@ The buttons on the homepage (Play Now, How to Play, and High Scores) maintain a 
 
 ### Modals
 
-Each modal opens with a smooth transition effect. Users can close the modal by either clicking the close button or clicking anywhere outside the modal area on the overlay.
+Each modal opens with a smooth transition effect. Users can close the modal by either clicking the close button or clicking anywhere outside the modal area.
 
 ### Hover effects
 The Close, Play Now, and High Scores buttons include CSS hover effects that change both the background and text color to provide visual feedback to users.
@@ -203,16 +203,16 @@ When a user selects an incorrect answer, the selected button turns red to indica
 
 ## Future Implementations
 
-1. Keyboard Accessibility
+1. Keyboard Accessibility -
 I plan to enhance the site’s accessibility by ensuring all interactive elements like modals, buttons, and quiz controls can be fully accessed and operated using the keyboard alone. Users will be able to open modals with keyboard shortcuts, navigate answer choices using arrow keys, and close modals with the Esc key.
 
-2. Achievement Trophies for Top Scores
+2. Achievement Trophies for Top Scores -
 I’d like to introduce a reward system that shows trophies or badges for the top three scores on the leaderboard. For example, gold, silver, and bronze icons could be displayed next to usernames to create a sense of accomplishment and encourage friendly competition.
 
-3. Expanded Question Pool
+3. Expanded Question Pool -
 In the future, I plan to add more quiz questions to increase variety and keep the experience fresh for returning users. I may also organise questions by difficulty or topic—such as upper limb, lower limb, or axial skeleton—to allow users to target specific areas of anatomy.
 
-4. Practice Mode for Incorrect Answers
+4. Practice Mode for Incorrect Answers -
 I’d like to implement a “Practice Mode” that stores questions users get wrong and allows them to revisit and practice those specific questions. This feature would help reinforce learning by focusing on areas that need improvement.
 
 [Back to Contents](#contents)
@@ -233,9 +233,9 @@ See [TESTING.md](TESTING.md) for more details of lighthouse testing and fixes.
 
 ### Validator Testing
 
-- [W3C](https://validator.w3.org/#validate_by_input) to validate the HTML code on every page of the website.
+- [W3C](https://validator.w3.org/#validate_by_input) to validate the HTML code.
 
-- [W3C](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my CSS code on every page of the website.
+- [W3C](https://jigsaw.w3.org/css-validator/#validate_by_input) to validate my CSS code.
 
 - [jshint](https://jshint.com/) to validate my javascript.
 
