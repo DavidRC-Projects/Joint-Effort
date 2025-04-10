@@ -682,14 +682,12 @@ footer {
   #nextbutton {
     margin-top: 20px;
   }
-
-  #highscorebtn,
   #score,
   #timer,
   #questioncontainer {
     font-size: 32px;
   }
-  #nextbutton {
+  #nextbutton, #highscorebtn {
     font-size: 24px;
   }
   #usernameForm button,
@@ -758,13 +756,12 @@ footer {
     font-size: 32px;
     margin-top: 20px;
   }
-  #highscorebtn,
   #score,
   #timer,
   label {
     font-size: 40px;
   }
-  #questioncontainer, #nextbutton {
+  #questioncontainer, #nextbutton, #highscorebtn {
     font-size: 28px;
   }
   #usernameForm button,
