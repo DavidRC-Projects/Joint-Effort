@@ -187,7 +187,7 @@ section {
 }
 
 /* Form styles */
-#usernameForm {
+#username-form {
   display: none;
   font-family: var(--secondary-font);
   margin-top: 80px;
@@ -225,7 +225,7 @@ input {
 /* Hidden quiz elements set to display none until user has clicked start button */
 
 /* styling hidden quiz elements */
-#questioncontainer {
+#question-container {
   position: absolute;
   padding: 10px;
   background-color: var(--clr-secondary);
@@ -236,10 +236,10 @@ input {
   width: 80%;
 }
 
-#answerone,
-#answertwo,
-#answerthree,
-#answerfour {
+#answer-one,
+#answer-two,
+#answer-three,
+#answer-four {
   position: relative;
   background-color: var(--clr-secondary);
   padding: 20px;
@@ -311,7 +311,7 @@ input {
   width: 100%;
 }
 
-#answerbuttons {
+#answer-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,14 +326,14 @@ input {
   margin-top: 100px;
 }
 
-#answerbuttons .btn {
+#answer-buttons .btn {
   width: 90vh;
   max-width: 500px;
   color: var(--clr-primary);
   background-color: var(--clr-secondary);
 }
 
-#nextbutton {
+#next-button {
   display: none;
   width: 50%;
   font-family: var(--secondary-font);
@@ -352,7 +352,7 @@ input {
   margin: 20px auto 0;
 }
 
-#nextbutton:hover {
+#next-button:hover {
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
@@ -380,7 +380,7 @@ input {
   color: var(--clr-primary);
 }
 
-#highscorebtn {
+#high-score-btn {
   display: none;
   width: 50%;
   font-family: var(--secondary-font);
@@ -397,7 +397,7 @@ input {
           transform: translate(-50%, -50%);
 }
 
-#highscorebtn:hover {
+#high-score-btn:hover {
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
@@ -460,7 +460,7 @@ input {
 /* Styles for content inside modals */
 
 /* Highscore h2 element styles */
-#finalscore {
+#final-score {
   margin-top: 10px;
   color: var(--clr-secondary);
   font-family: var(--primary-font);
@@ -469,7 +469,7 @@ input {
   text-decoration: underline;
 }
 
-#highScoresModal li {
+#high-scores-modal li {
   font-size: 0.6rem;
   font-weight: 500;
   padding: 10px;
@@ -489,7 +489,7 @@ input {
 }
 
 /* Gold - 1st Place with code used from https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child */
-#highscorelist li:first-child {
+#high-score-list li:first-child {
   color: gold;
   font-weight: bold;
   font-size: 1rem;
@@ -503,7 +503,7 @@ input {
   margin-bottom: 5px;
 }
 /* Code used from https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child */
-#highscorelist li:nth-child(2) {
+#high-score-list li:nth-child(2) {
   color: silver;
   font-weight: bold;
   font-size: 0.9rem;
@@ -516,7 +516,7 @@ input {
   margin-bottom: 5px;
 }
 
-#highscorelist li:nth-child(3) {
+#high-score-list li:nth-child(3) {
   color: #cd7f32;
   font-weight: bold;
   font-size: 0.8rem;
@@ -530,7 +530,7 @@ input {
 }
 
 /* How to play styles for h2 element and span elements */
-#howToPlayh2 {
+#how-to-play-h2 {
   margin-top: 10px;
   color: var(--clr-secondary);
   font-family: var(--primary-font);
@@ -546,7 +546,7 @@ input {
   color: rgb(191, 250, 191);
 }
 
-#howToPlayModal ul {
+#how-to-play-modal ul {
   list-style: none;
   font-size: 0.8rem;
   font-weight: 600;
@@ -555,7 +555,7 @@ input {
   color: var(--clr-secondary);
 }
 
-#howToPlayModal li {
+#how-to-play-modal li {
   margin-top: 20px;
 }
 
@@ -573,7 +573,7 @@ footer {
     font-size: 1.8rem;
   }
 
-  #homepageh2 {
+  #homepage-h2 {
     font-size: 1.2rem;
     padding: 0 10px;
     margin-bottom: 10px;
@@ -583,8 +583,8 @@ footer {
     font-size: 1rem;
     padding: 0 10px;
   }
-  #highScoresModal,
-  #howToPlayModal,
+  #high-scores-modal,
+  #how-to-play-modal,
   .modal {
     height: 90vh;
   }
@@ -594,7 +594,7 @@ footer {
   .button-container {
     padding: 5px 15px;
   }
-  #answerbuttons {
+  #answer-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -608,7 +608,7 @@ footer {
             align-items: center;
     margin-top: 120px;
   }
-  #answerbuttons .btn {
+  #answer-buttons .btn {
     width: 100%;
   }
   #btnhowtoplay {
@@ -625,7 +625,7 @@ footer {
     border-radius: 5px;
   }
 
-  #questioncontainer {
+  #question-container {
     font-size: 16px;
     margin-bottom: 20px;
     margin-top: 10px;
@@ -662,16 +662,16 @@ footer {
     padding: 5px 15px;
     margin-top: 70px;
   }
-  #howToPlayh2,
-  #finalscore,
+  #how-to-play-h2,
+  #final-score,
   #btnhowtoplay {
     font-size: 1.5rem;
   }
-  #questioncontainer {
+  #question-container {
     font-size: 20px;
     margin-top: 10px;
   }
-  #answerbuttons {
+  #answer-buttons {
     margin-top: 140px;
     font-size: 24px;
     gap: 15px;
@@ -679,50 +679,50 @@ footer {
   .close-button {
     font-size: 20px;
   }
-  #nextbutton {
+  #next-button {
     margin-top: 20px;
   }
   #score,
   #timer,
-  #questioncontainer {
+  #question-container {
     font-size: 32px;
   }
-  #nextbutton, #highscorebtn {
+  #next-button, #high-score-btn {
     font-size: 24px;
   }
-  #usernameForm button,
+  #username-form button,
   #username {
     font-size: 1.25rem;
   }
-  #usernameForm {
+  #username-form {
     font-size: 1.25rem;
     width: 50vh;
   }
   .correct {
     font-size: 30px !important;
   }
-  #howToPlayModal ul li {
+  #how-to-play-modal ul li {
     margin-top: 60px;
     font-size: 1.2rem;
   }
   .highlight {
     font-size: 1.25rem;
   }
-  #finalscore {
+  #final-score {
     font-size: 2.5rem;
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  #highScoresModal li {
+  #high-scores-modal li {
     font-size: 1.3rem;
   }
-  #highscorelist li:first-child {
+  #high-score-list li:first-child {
     font-size: 2rem;
   }
-  #highscorelist li:nth-child(2) {
+  #high-score-list li:nth-child(2) {
     font-size: 1.7rem;
   }
-  #highscorelist li:nth-child(3) {
+  #high-score-list li:nth-child(3) {
     font-size: 1.5rem;
   }
   .modal-img {
@@ -740,18 +740,18 @@ footer {
     font-size: 3.5rem;
   }
   #paragraph,
-  #howToPlayh2,
-  #finalscore,
+  #how-to-play-h2,
+  #final-score,
   #btnhowtoplay,
   .btn {
     font-size: 2.5rem;
   }
-  #answerbuttons {
+  #answer-buttons {
     margin-top: 100px;
     font-size: 28px;
     gap: 25px;
   }
-  #questioncontainer,
+  #question-container,
   .close-button {
     font-size: 32px;
     margin-top: 20px;
@@ -761,41 +761,41 @@ footer {
   label {
     font-size: 40px;
   }
-  #questioncontainer, #nextbutton, #highscorebtn {
+  #question-container, #next-button, #high-score-btn {
     font-size: 28px;
   }
-  #usernameForm button,
+  #username-form button,
   #username {
     font-size: 2.5rem;
   }
-  #usernameForm {
+  #username-form {
     font-size: 1.5rem;
   }
   .correct {
     font-size: 36px !important;
   }
-  #howToPlayModal ul li {
+  #how-to-play-modal ul li {
     margin-top: 90px;
     font-size: 1.7rem;
   }
   .highlight {
     font-size: 2rem;
   }
-  #finalscore {
+  #final-score {
     font-size: 3.5rem;
     margin-top: 20px;
     margin-bottom: 30px;
   }
-  #highScoresModal li {
+  #high-scores-modal li {
     font-size: 1.8rem;
   }
-  #highscorelist li:first-child {
+  #high-score-list li:first-child {
     font-size: 2.5rem;
   }
-  #highscorelist li:nth-child(2) {
+  #high-score-list li:nth-child(2) {
     font-size: 2.2rem;
   }
-  #highscorelist li:nth-child(3) {
+  #high-score-list li:nth-child(3) {
     font-size: 2rem;
   }
   .modal-img {

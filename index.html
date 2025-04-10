@@ -29,7 +29,7 @@
     </header>
    
     <main>
-      <h2 id="homepageh2">Your Friendly Quiz on Bone Anatomy!</h2>
+      <h2 id="homepage-h2">Your Friendly Quiz on Bone Anatomy!</h2>
       <p id="paragraph">
         Click <strong>play now</strong> to test your knowledge
       </p>
@@ -37,13 +37,13 @@
 <div class="btncontainer">
 
         <!-- Play Now Button -->
-        <button id="playnow" data-modal-target="#modal" class="btn">Play Now</button>
+        <button id="play-now" data-modal-target="#modal" class="btn">Play Now</button>
 
         <!-- How to Play Button -->
-        <button id="howtoplay" data-modal-target="#howToPlayModal" class="btn">How to Play</button>
+        <button id="how-to-play" data-modal-target="#howToPlayModal" class="btn">How to Play</button>
         
         <!-- Highscores Button -->
-        <button id="highscores" class="btn">High Scores</button>
+        <button id="high-scores" class="btn">High Scores</button>
         </div>
         
         <!-- Play Now Modal -->
@@ -52,28 +52,28 @@
             <div id="score">Score: 0</div><span id="timer"></span>
             <section>
               <div id="quiz-intro"><h2>Welcome to Joint Effort the anatomy quiz</h2><p>Please enter your username below to start the quiz</p></div>
-              <form id="usernameForm">
+              <form id="username-form">
                 <label for="username">Enter Username:</label>
                 <input type="text" name="username" id="username" placeholder="Enter username">
                 <button type="submit">Submit</button>
               </form>
               <div><img src="assets/images/endquizpic.png" alt="Skeleton relaxing with a drink" class="modal-img"></div>
-              <div id="questioncontainer">Question</div>
-              <div id ="answerbuttons">
-              <button id="answerone">Answer1</button>
-              <button id="answertwo">Answer2</button>
-              <button id="answerthree">Answer3</button>
-              <button id="answerfour">Answer4</button>
+              <div id="question-container">Question</div>
+              <div id ="answer-buttons">
+              <button id="answer-one">Answer1</button>
+              <button id="answer-two">Answer2</button>
+              <button id="answer-three">Answer3</button>
+              <button id="answer-four">Answer4</button>
               </div>
-              <button id="nextbutton">Next</button>
-              <button id="highscorebtn">High Scores</button>
+              <button id="next-button">Next</button>
+              <button id="high-score-btn">High Scores</button>
             </section>
         </div>
 
         <!-- How to Play Modal -->
-        <div class="modal" id="howToPlayModal">
+        <div class="modal" id="how-to-play-modal">
           <button data-close-button class="close-button">Close</button>
-          <h2 id="howToPlayh2">How to Play</h2>
+          <h2 id="how-to-play-h2">How to Play</h2>
           <ul>
             <li>Click <span class="highlight">'Play Now'</span>button to start the quiz.</li>
             <li>Answer multiple-choice questions on <span class="highlight">bone anatomy</span>.</li>
@@ -87,10 +87,10 @@
         </div>
 
          <!-- Highscores Modal -->
-         <div class="modal" id="highScoresModal">
+         <div class="modal" id="high-scores-modal">
           <button data-close-button class="close-button">Close</button>
-          <h2 id=finalscore>High Scores</h2>
-          <ol id="highscorelist"></ol>
+          <h2 id=final-score>High Scores</h2>
+          <ol id="high-score-list"></ol>
       </div>
 
         <div id="overlay"></div>

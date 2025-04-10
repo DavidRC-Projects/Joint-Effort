@@ -1,5 +1,5 @@
 import { currentQuestionIndex, score, timer, startQuiz } from './quizfunctions.js';
-const playNowButton = document.getElementById("playnow");
+const playNowButton = document.getElementById("play-now");
 const playNowModal = document.getElementById("modal");
 const closePlayNowButton = playNowModal.querySelector("[data-close-button]");
 
@@ -19,7 +19,6 @@ function openPlayNowModal() {
   if (typeof startQuiz === 'function') {
     // Force reset of all quiz state
     currentQuestionIndex = 0;
-    console.log("After startQuiz:", currentQuestionIndex);
     score = 0;
     
     // Clear any existing timer

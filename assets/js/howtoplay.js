@@ -1,6 +1,6 @@
 //Event listener triggers function when how to play button is clicked, making the how to play container appear in the centre of the screen.
-const howToPlayButton = document.getElementById("howtoplay");
-const howToPlayModal = document.getElementById("howToPlayModal");
+const howToPlayButton = document.getElementById("how-to-play");
+const howToPlayModal = document.getElementById("how-to-play-modal");
 const closeHowToPlayButton = howToPlayModal.querySelector("[data-close-button]");
 
 howToPlayButton.addEventListener("click", openHowToPlayModal);

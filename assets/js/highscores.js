@@ -1,9 +1,9 @@
 //Event listener triggers function when highscores button is clicked, making the high scores container appear in the centre of the screen.
 
-const highScoresButton = document.getElementById("highscores");
-const highScoresModal = document.getElementById("highScoresModal");
+const highScoresButton = document.getElementById("high-scores");
+const highScoresModal = document.getElementById("high-scores-modal");
 const closeHighScoresButton = highScoresModal.querySelector("[data-close-button]");
-const highScoresList = document.getElementById('highscorelist');
+const highScoresList = document.getElementById('high-score-list');
 
 highScoresButton.addEventListener("click", openHighScoresModal);
 closeHighScoresButton.addEventListener("click", closeHighScoresModal);
@@ -21,7 +21,7 @@ export function openHighScoresModal() {
  */
 function displayHighScores() {
   highScoresList.innerHTML = "";
-  let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+  let highScores = JSON.parse(localStorage.getItem("high-scores")) || [];
 
   if (highScores.length === 0) {
     highScoresList.innerHTML = "<li>No highscores</li>";
@@ -32,8 +32,6 @@ function displayHighScores() {
     highScoresList.appendChild(listItem);
   });
    }
-   
-  console.log("Displayed High Scores:", highScores);
 }
 
 /**

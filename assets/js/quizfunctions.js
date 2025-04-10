@@ -1,12 +1,12 @@
 import { openHighScoresModal } from './highscores.js';
 import { questions } from "./questionlist.js";
 
-const questionElement = document.getElementById("questioncontainer");
-const answerButtons = document.getElementById("answerbuttons");
-const nextButton = document.getElementById("nextbutton");
+const questionElement = document.getElementById("question-container");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-button");
 const scoreElement = document.getElementById("score"); 
-const form = document.getElementById("usernameForm");  
-const highScoreButton = document.getElementById("highscorebtn");
+const form = document.getElementById("username-form");  
+const highScoreButton = document.getElementById("high-score-btn");
 
 
 export let currentQuestionIndex = 0;
@@ -158,14 +158,14 @@ function answerSelect(e){
  * Edited from https://www.youtube.com/watch?v=rsWhJ2XviE4.
 */
 function saveHighScore(username, score) {
-    let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    let highScores = JSON.parse(localStorage.getItem("high-scores")) || [];
     const newScore = { name: username, score: score };
     
     highScores.push(newScore);
     highScores.sort((a, b) => b.score - a.score);
     highScores.splice(10);
     
-    localStorage.setItem("highScores", JSON.stringify(highScores));
+    localStorage.setItem("high-scores", JSON.stringify(highScores));
 }
 
 /**
@@ -196,7 +196,7 @@ function showScore() {
         } else {
             saveHighScore(userInput, score);
             Swal.fire({
-                title: "congratulations",
+                title: "Congratulations",
                 text: (`Thank you ${userInput}, please click "Play Again" or "High Scores" to see where you rank.`),
                 icon: "success"
             });
