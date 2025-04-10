@@ -279,6 +279,17 @@ input {
   border-radius: 5px;
 }
 
+/* Hidden end of quiz image below the form */
+.modal-img {
+  width: 50%;
+  max-width: 400px;
+  margin-top: 100px;
+  border-radius: 8px;
+  border: 2px solid var(--btn-answercolour);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Button Styles */
 .btncontainer {
   position: relative;
@@ -716,6 +727,11 @@ footer {
   #highscorelist li:nth-child(3) {
     font-size: 1.5rem;
   }
+  .modal-img {
+    margin-top: 100px;
+    width: 250px;
+    height: auto;
+}
 }
 /* Styles for screens extra large */
 @media (min-width: 1600px) {
@@ -785,4 +801,9 @@ footer {
   #highscorelist li:nth-child(3) {
     font-size: 2rem;
   }
+  .modal-img {
+    margin-top: 130px;
+    width: 300px;
+    height: auto;
+}
 }

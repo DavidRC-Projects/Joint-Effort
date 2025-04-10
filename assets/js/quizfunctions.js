@@ -66,6 +66,7 @@ export function startQuiz(){
 
     form.style.display = "none";
     highScoreButton.style.display = "none";
+    document.querySelector('.modal-img').style.display = 'none';
 }
 
 /**
@@ -203,6 +204,7 @@ function showScore() {
             nextButton.style.display = "block";
             nextButton.innerHTML = "Play Again";
             highScoreButton.style.display = "block";
+            document.querySelector('.modal-img').style.display = 'block';
         }
     });
 };
