@@ -545,7 +545,7 @@ input {
 }
 
 #howToPlayModal li {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* Footer */
@@ -688,7 +688,7 @@ footer {
     font-size: 30px !important;
   }
   #howToPlayModal ul li {
-    margin-top: 70px;
+    margin-top: 60px;
     font-size: 1.2rem;
   }
   .highlight {
@@ -755,7 +755,7 @@ footer {
     font-size: 36px !important;
   }
   #howToPlayModal ul li {
-    margin-top: 100px;
+    margin-top: 90px;
     font-size: 1.7rem;
   }
   .highlight {
