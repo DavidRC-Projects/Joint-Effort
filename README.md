@@ -4,7 +4,7 @@
 
 The joint effort quiz is to be designed for physiotherapy students and anyone interested in testing and expanding their knowledge of human anatomy. This quiz focuses on bone anatomy, making it a fun and engaging way to reinforce understanding of the bones in the human body. The aim is to create a learning tool that helps the user improve their anatomical knowledge and keeps the learners on their toes as they work against the clock to beat the highscores. The aim is to offer a user-friendly platform for interactive learning.
 
-![wireframehomepage](/assets/images/responsivemockup.png)
+![wireframehomepage](/assets/documents/responsivemockup.png)
 
 Link to [Responsive mockup](https://ui.dev/amiresponsive?url=https://davidrc-projects.github.io/Joint-Effort/)
 
@@ -61,11 +61,13 @@ Link to [Responsive mockup](https://ui.dev/amiresponsive?url=https://davidrc-pro
 * I want to develop a responsive interface so users can easily navigate the quiz and check high scores to see their performance.
 * I want to ensure that the quiz provides immediate feedback when a user selects an incorrect answer by displaying the correct answer.
 
+## Design
+
 ### Colour Scheme
 
 I have used the following hex colors taken from the background image on the homepage:
 
-![colourscheme](/assets/images/colourpicker.png)
+![colourscheme](/assets/documents/colourpicker.png)
 
 ### Typography
 
@@ -78,13 +80,13 @@ The Merriweather font was used as the primary font, with Poppins as the secondar
 I created wireframes for mobile, tablet and desktop using figma.
 
 #### Home page
-![wireframe home page](/assets/images/wireframehomepage.png)
+![wireframe home page](/assets/documents/wireframehomepage.png)
 
 #### Quiz page
-![wireframe quiz page](/assets/images/wireframequizpage.png)
+![wireframe quiz page](/assets/documents/wireframequizpage.png)
 
 #### How to play page
-![wireframe how to play page](/assets/images/wireframehowtoplaypage.png)
+![wireframe how to play page](/assets/documents/wireframehowtoplaypage.png)
 
 ### Existing Features
 
@@ -95,35 +97,35 @@ This is the main landing page where users interested in learning anatomy can get
 
 Please see a screen shot of the desktop and mobile view of the home page:
 
-![Desktop view of home page](/assets/images/homepage.png)![Mobile view of home page](/assets/images/homepagemobile.png)
+![Desktop view of home page](/assets/documents/homepage.png)![Mobile view of home page](/assets/documents/homepagemobile.png)
 
 #### 404 Error Page: 
 If a user mistypes the URL, they are automatically redirected back to the homepage after 3 seconds. The page also provides feedback to inform the user that they are being redirected, helping maintain a smooth user experience.
 
 Please see a screen shot of the desktop and mobile view of the 404 page:
 
-![Desktop view of 404 page](/assets/images/error404page.png)![Mobile view of 404 page](/assets/images/mobile404errorpage.png)
+![Desktop view of 404 page](/assets/documents/error404page.png)![Mobile view of 404 page](/assets/documents/mobile404errorpage.png)
 
 #### Favicon and Title:
 A favicon appears in the browser tab for easy recognition.
 
-![Favicon](/assets/images/faviconexample.png)
+![Favicon](/assets/documents/faviconexample.png)
 
 The site title is displayed at the top of the page and also acts as a clickable link that navigates back to the homepage. The footer is at the bottom of the page and mainstains a consistent deisgn that is responsive to mobile, tablet and desktop devices.
 
-![Page title](/assets/images/title.png)
+![Page title](/assets/documents/title.png)
 
 Welcome Message:
 Introduces the user to the quiz, giving them a clear understanding of the topic they will be tested on.
 
-![Welcome message](/assets/images/welcomemessage.png)
+![Welcome message](/assets/documents/welcomemessage.png)
 
 #### Play Now Modal:
 This modal allows users to begin the quiz. It presents the questions, multiple-choice answers, score, and a countdown timer within the quiz interface.
 
 Please see a screen shot of the desktop and mobile view of the play now modal:
 
-![Play now modal](/assets/images/playnowmodaldesktop.png)![Play now modal mobile](/assets/images/playnowmodalmobile.png)
+![Play now modal](/assets/documents/playnowmodaldesktop.png)![Play now modal mobile](/assets/documents/playnowmodalmobile.png)
 
 Question Display - Shows one question at a time with multiple-choice answers.
 
@@ -131,47 +133,47 @@ Score and Timer display - Displays the current score and remaining time. When th
 
 Please see a screen shot of the question, score and timer:
 
-![Question, score and timer](/assets/images/questionscoreandtimer.png)
+![Question, score and timer](/assets/documents/questionscoreandtimer.png)
 
 Next Button - Appears after a user answers a question, allowing them to proceed to the next one.
 
 Please see a screen shot of the next button:
 
-![Next button hidden](/assets/images/nextbuttonhidden.png)![Next button](/assets/images/nextbuttonappear.png)
+![Next button hidden](/assets/documents/nextbuttonhidden.png)![Next button](/assets/documents/nextbuttonappear.png)
 
 Warning message when quiz has 10 seconds remaining – A warning message appears in place of the timer in the top left corner of the screen when only 10 seconds remain. This message stays visible for 3 seconds before disappearing.
 
-![Warning message](/assets/images/hurrymessage.png)
+![Warning message](/assets/documents/hurrymessage.png)
 
 Username Form - Appears at the end of the quiz. If no username is submitted, an error message is displayed. When a username is entered, the user receives a confirmation message and is advised to check the high scores or play again.
 
 Please see a screen shot of the form input:
 
-![Form input](/assets/images/forminput.png)
+![Form input](/assets/documents/forminput.png)
 
 Alert message when the user has not filled in the username:
 
-![Alert error message](/assets/images/erroralert.png)
+![Alert error message](/assets/documents/erroralert.png)
 
 Alert message when the user has entered their username:
 
-![Alert success message](/assets/images/successalert.png)
+![Alert success message](/assets/documents/successalert.png)
 
 Play Again Button - Appears once a valid username has been entered, allowing the user to restart the quiz.
 
 Highscores Button - Also appears after a username has been submitted and opens the High Scores modal.
 
-![Play again and highscores buttons](/assets/images/playnowandhighscoresbuttons.png)
+![Play again and highscores buttons](/assets/documents/playnowandhighscoresbuttons.png)
 
 How to Play Modal:
 This modal provides clear instructions on how to play the quiz. Key information is highlighted using span elements to draw the user's attention to important details.
 
-![How to play modal](/assets/images/howtoplaymodal.png)
+![How to play modal](/assets/documents/howtoplaymodal.png)
 
 Highscores Modal:
 This modal displays the top scores submitted by users who have completed the quiz. An ordered list shows usernames and their corresponding scores. High scores can be accessed both before starting the quiz and after it is completed.
 
-![Highscores modal](/assets/images/highscoresmodal.png)
+![Highscores modal](/assets/documents/highscoresmodal.png)
 
 Close Button - Each modal includes a close button that allows users to exit the modal and return to the main interface.
 
@@ -185,7 +187,7 @@ The homepage includes a favicon, the site title "Joint Effort", and a heading h1
 
 The buttons on the homepage (Play Now, How to Play, and High Scores) maintain a consistent and accessible design. They are fully responsive across all screen sizes. JavaScript is used to provide visual feedback such as background and text colour changes when a user hovers over a button.
 
-![Play now button hover](/assets/images/playnowhover.png)![How to play button hover](/assets/images/howtoplayhover.png)![Highscores button hover](/assets/images/homehighscoreshover.png)
+![Play now button hover](/assets/documents/playnowhover.png)![How to play button hover](/assets/documents/howtoplayhover.png)![Highscores button hover](/assets/documents/homehighscoreshover.png)
 
 ### Modals
 
@@ -194,12 +196,12 @@ Each modal opens with a smooth transition effect. Users can close the modal by e
 ### Hover effects
 The Close, Play Now, and High Scores buttons include CSS hover effects that change both the background and text color to provide visual feedback to users.
 
-![Close button hover](/assets/images/quizendclosehover.png)![Play again button hover](/assets/images/playagainhover.png)![Highscores button hover](/assets/images/highscoreshover.png)
+![Close button hover](/assets/documents/quizendclosehover.png)![Play again button hover](/assets/documents/playagainhover.png)![Highscores button hover](/assets/documents/highscoreshover.png)
 
 ### Answer Buttons
 When a user selects an incorrect answer, the selected button turns red to indicate the mistake, while the correct answer is highlighted in green. This provides immediate feedback, showing which answer was correct and which was not. If the user selects the correct answer, only the green highlighted button is displayed. Once an answer is chosen, all other answer buttons are disabled to prevent further changes. A "Next" button then appears, allowing the user to proceed to the following question. The user's score increases by 1 for each correct answer.
 
-![Correct answer button](/assets/images/correctanswerbutton.png)![Incorrect answer button](/assets/images/nextbuttonappear.png)
+![Correct answer button](/assets/documents/correctanswerbutton.png)![Incorrect answer button](/assets/documents/nextbuttonappear.png)
 
 ## Future Implementations
 
