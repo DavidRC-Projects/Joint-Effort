@@ -83,7 +83,7 @@ main {
   padding: 20px;
 }
 
-#homepageh2 {
+#homepage-h2 {
   position: absolute;
   font-size: 2.5rem;
   font-weight: bold;
@@ -644,7 +644,7 @@ footer {
     font-size: 3rem;
   }
 
-  #homepageh2 {
+  #homepage-h2 {
     font-size: 2.5rem;
     padding: 0 10px;
     margin-bottom: 10px;
@@ -736,7 +736,7 @@ footer {
   h1 {
     font-size: 4rem;
   }
-  #homepageh2 {
+  #homepage-h2 {
     font-size: 3.5rem;
   }
   #paragraph,
@@ -775,8 +775,8 @@ footer {
     font-size: 36px !important;
   }
   #how-to-play-modal ul li {
-    margin-top: 90px;
-    font-size: 1.7rem;
+    margin-top: 70px;
+    font-size: 1.6rem;
   }
   .highlight {
     font-size: 2rem;
@@ -787,16 +787,16 @@ footer {
     margin-bottom: 30px;
   }
   #high-scores-modal li {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   #high-score-list li:first-child {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   #high-score-list li:nth-child(2) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   #high-score-list li:nth-child(3) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .modal-img {
     margin-top: 130px;

@@ -161,9 +161,11 @@ Alert message when the user has entered their username:
 
 Play Again Button - Appears once a valid username has been entered, allowing the user to restart the quiz.
 
-Highscores Button - Also appears after a username has been submitted and opens the High Scores modal.
+Highscores Button - Appears after a username has been submitted and opens the High Scores modal.
 
-![Play again and highscores buttons](/assets/documents/playnowandhighscoresbuttons.png)
+Modal image - Also appears after the username has been submitted. This is resposinve to all screen sizes.
+
+![Play again and highscores buttons](/assets/documents/playnowandhighscoreandimage.png)
 
 How to Play Modal:
 This modal provides clear instructions on how to play the quiz. Key information is highlighted using span elements to draw the user's attention to important details.
