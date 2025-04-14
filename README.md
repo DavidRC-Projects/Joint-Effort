@@ -50,7 +50,7 @@ Link to [Responsive mockup](https://ui.dev/amiresponsive?url=https://davidrc-pro
 ### Returning Visitor Goals
 * I want to replay the quiz to see if i can improve my score.
 * I would like to track my best score and aim to beat my previous results.
-* I would like the quiz to be easy to navigate so i can check the highscores.
+* I would like the quiz to be easy to navigate so i can check the high scores.
 
 ### Frequant Visitor Goals
 * I would like to earn trophies for achieving a top 3 score.

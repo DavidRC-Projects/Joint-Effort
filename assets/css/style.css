@@ -32,6 +32,7 @@
   --btn-answercolour: #1EA200;
 }
 
+/* Applied a background image that covers the entire screen */
 html,
 body {
   height: 100%;
@@ -223,8 +224,6 @@ input {
 }
 
 /* Hidden quiz elements set to display none until user has clicked start button */
-
-/* styling hidden quiz elements */
 #question-container {
   position: absolute;
   padding: 10px;
@@ -567,7 +566,7 @@ footer {
   font-size: 14px;
 }
 
-/* Media queries to allow different styles for small screens (tablets and mobile phones) */
+/* Media query: mobile phones and smaller devices (768px and below) */
 @media (max-width: 768px) {
   h1 {
     font-size: 1.8rem;
@@ -638,7 +637,7 @@ footer {
   }
 }
 
-/* Media queries to allow different styles for desktop and larger screens */
+/* Media query: tablets and larger (992px and up) */
 @media (min-width: 992px) {
   h1 {
     font-size: 3rem;
@@ -731,7 +730,7 @@ footer {
     height: auto;
 }
 }
-/* Styles for screens extra large */
+/* Styles for extra large screens (1600px and up) */
 @media (min-width: 1600px) {
   h1 {
     font-size: 4rem;
