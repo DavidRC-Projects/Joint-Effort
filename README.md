@@ -375,7 +375,7 @@ Used MDN Web Docs for guidance on the window.location.replace() method:
 [MDN Web Docs-Location.replace()](https://developer.mozilla.org/en-US/docs/Web/API/Location/replace).
 ### Acknowledgments
 
-* I would like thank my mentor Jubril Akolade. Jubril gave advice lots of good advice and gave me tips like using sweetalert2 and adding highscores to my quiz game.
+* I would like to thank my mentor, Jubril Akolade. Jubril provided valuable advice and insightful tips, such as integrating SweetAlert2 and implementing the high scores feature in my quiz game.
 * I would like to thank my partner for all her support during this project.
 
 [Back to Contents](#contents)
