@@ -332,7 +332,7 @@ JavaScript, HTML and CSS
 ## Credits
 
 ### Media 
-The background image for the homepage was taken from [Pexels](https://www.pexels.com/photo/selective-focus-photography-of-skeleton-1528375/).
+The background image for the homepage and image in the play now modal were taken from [Pexels](https://www.pexels.com/photo/selective-focus-photography-of-skeleton-1528375/).
 
 ### Features
 
